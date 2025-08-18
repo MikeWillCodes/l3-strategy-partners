@@ -46,13 +46,13 @@ export function Footer() {
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="font-semibold text-text mb-4">{category}</h3>
+              <h3 className="font-semibold text-white mb-4">{category}</h3>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-muted hover:text-text transition-colors duration-200 text-sm"
+                      className="text-white/85 hover:text-white transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -65,17 +65,17 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted text-sm">
+          <p className="text-white/80 text-sm">
             © 2024 L3 Strategy Partners. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-muted hover:text-text transition-colors text-sm">
+            <Link href="#" className="text-white/85 hover:text-white transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-muted hover:text-text transition-colors text-sm">
+            <Link href="#" className="text-white/85 hover:text-white transition-colors text-sm">
               Terms of Service
             </Link>
-            <Link href="#" className="text-muted hover:text-text transition-colors text-sm">
+            <Link href="#" className="text-white/85 hover:text-white transition-colors text-sm">
               Security
             </Link>
           </div>

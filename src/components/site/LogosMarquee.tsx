@@ -2,20 +2,27 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
+
+// Import logos directly from src/images
+import AmazonLogo from "@/images/Amazon_logo.svg";
+import MicrosoftLogo from "@/images/Microsoft_logo_(2012).png";
+import PayPalLogo from "@/images/PayPal.png";
+import GartnerLogo from "@/images/Gartner_logo.png";
+import EALogo from "@/images/Electronic_Arts_2020.svg";
+import FingerprintLogo from "@/images/fingercheck.png";
+import MetrixLogo from "@/images/METRIX.png";
+import OTLogo from "@/images/ot.svg";
 
 const logos = [
-  { name: "TechCorp", alt: "TechCorp logo" },
-  { name: "DataFlow", alt: "DataFlow logo" },
-  { name: "AI Systems", alt: "AI Systems logo" },
-  { name: "CloudVenture", alt: "CloudVenture logo" },
-  { name: "InnovateLab", alt: "InnovateLab logo" },
-  { name: "FutureScale", alt: "FutureScale logo" },
-  { name: "SmartGrid", alt: "SmartGrid logo" },
-  { name: "NextGen AI", alt: "NextGen AI logo" },
-  { name: "DataMind", alt: "DataMind logo" },
-  { name: "ScaleUp", alt: "ScaleUp logo" },
-  { name: "TechForward", alt: "TechForward logo" },
-  { name: "AI Solutions", alt: "AI Solutions logo" }
+  { src: AmazonLogo, alt: "Amazon Logo", name: "Amazon" },
+  { src: MicrosoftLogo, alt: "Microsoft Logo", name: "Microsoft" },
+  { src: PayPalLogo, alt: "PayPal Logo", name: "PayPal" },
+  { src: GartnerLogo, alt: "Gartner Logo", name: "Gartner" },
+  { src: EALogo, alt: "Electronic Arts Logo", name: "Electronic Arts" },
+  { src: FingerprintLogo, alt: "Fingercheck Logo", name: "Fingercheck" },
+  { src: MetrixLogo, alt: "METRIX Logo", name: "METRIX" },
+  { src: OTLogo, alt: "OT Logo", name: "OT" }
 ];
 
 export function LogosMarquee() {
@@ -55,14 +62,15 @@ export function LogosMarquee() {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 card p-4 min-w-[180px] text-center group hover:scale-105 transition-all duration-300"
+                className="flex-shrink-0 p-6 min-w-[160px] h-[80px] flex items-center justify-center group hover:scale-105 transition-all duration-300"
               >
-                <div 
-                  className="text-lg font-semibold text-muted/60 group-hover:text-muted tracking-wide transition-colors duration-300"
-                  aria-label={logo.alt}
-                >
-                  {logo.name}
-                </div>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={120}
+                  height={60}
+                  className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                />
               </div>
             ))}
           </motion.div>

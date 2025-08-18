@@ -21,7 +21,7 @@ export function Testimonial({ quote, author, role, company }: TestimonialProps) 
     >
       <Quote className="h-8 w-8 text-primary mb-6" />
       
-      <blockquote className="text-xl lg:text-2xl text-text mb-8 leading-relaxed font-medium">
+      <blockquote className="text-xl lg:text-2xl text-white mb-8 leading-relaxed font-medium">
         &ldquo;{quote}&rdquo;
       </blockquote>
       
@@ -30,8 +30,8 @@ export function Testimonial({ quote, author, role, company }: TestimonialProps) 
           {author.split(' ').map(n => n[0]).join('')}
         </div>
         <div>
-          <div className="font-semibold text-text">{author}</div>
-          <div className="text-muted">{role} at {company}</div>
+          <div className="font-semibold text-white">{author}</div>
+          <div className="text-white/85">{role} at {company}</div>
         </div>
       </div>
     </motion.div>

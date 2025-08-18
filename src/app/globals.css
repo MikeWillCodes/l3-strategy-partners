@@ -8,7 +8,7 @@
   --panel: rgba(255, 255, 255, 0.04);
   --panel-strong: rgba(255, 255, 255, 0.06);
   --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.8);
+  --muted: rgba(255, 255, 255, 0.85);
   --ring: rgba(139, 92, 246, 0.5);
   --iris: conic-gradient(from 0deg, #7cf6ff, #7b5cff, #ff6ad5, #ffd36e, #70ffa5, #7cf6ff);
   
@@ -24,7 +24,7 @@
   --secondary: var(--panel-strong);
   --secondary-foreground: var(--text);
   --muted: var(--panel);
-  --muted-foreground: rgba(255, 255, 255, 0.8);
+  --muted-foreground: rgba(255, 255, 255, 0.85);
   --accent: var(--panel-strong);
   --accent-foreground: var(--text);
   --destructive: #ff6b6b;

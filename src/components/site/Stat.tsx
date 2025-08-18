@@ -20,7 +20,7 @@ export function Stat({ value, label, delay = 0 }: StatProps) {
       <div className="text-display text-gradient mb-2 font-bold">
         {value}
       </div>
-      <div className="text-muted font-medium">
+      <div className="text-white/85 font-medium">
         {label}
       </div>
     </motion.div>

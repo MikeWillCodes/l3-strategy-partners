@@ -39,8 +39,8 @@ export function Navbar() {
                   href={item.href}
                   className={`transition-all duration-200 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:underline rounded-sm px-1 py-1 ${
                     isActive 
-                      ? "text-text border-b-2 border-primary" 
-                      : "text-muted hover:text-text hover:underline"
+                      ? "text-white border-b-2 border-primary" 
+                      : "text-white/90 hover:text-white hover:underline"
                   }`}
                 >
                   {item.name}
@@ -78,8 +78,8 @@ export function Navbar() {
                       href={item.href}
                       className={`text-lg font-medium transition-all duration-200 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:underline rounded-sm ${
                         isActive 
-                          ? "text-text border-l-4 border-primary pl-4" 
-                          : "text-muted hover:text-text"
+                          ? "text-white border-l-4 border-primary pl-4" 
+                          : "text-white/90 hover:text-white"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >

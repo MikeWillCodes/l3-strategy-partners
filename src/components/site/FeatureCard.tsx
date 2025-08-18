@@ -25,8 +25,8 @@ export function FeatureCard({ icon: Icon, title, description, delay = 0 }: Featu
         </div>
       </div>
       
-      <h3 className="text-xl font-semibold text-text mb-3">{title}</h3>
-      <p className="text-muted leading-relaxed">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+      <p className="text-white/85 leading-relaxed">{description}</p>
     </motion.div>
   );
 }
