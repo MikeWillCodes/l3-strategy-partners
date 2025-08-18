@@ -56,7 +56,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-display mb-6"
+              className="text-page-hero mb-6"
             >
               Our mission is to accelerate the development of{" "}
               <span className="text-gradient">AI applications</span>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
               L3 Strategy Partners is a leading AI consulting firm dedicated to helping organizations harness the transformative power of artificial intelligence responsibly and effectively.
             </motion.p>
@@ -87,8 +87,8 @@ export default function AboutPage() {
             <div className="card overflow-hidden">
               <div className="h-96 bg-gradient-to-r from-primary/20 via-purple-600/20 to-cyan-400/20 relative flex items-center justify-center">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-text mb-2">Building the Future of AI</h3>
-                  <p className="text-muted">Our team at work creating next-generation AI solutions</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Building the Future of AI</h3>
+                  <p className="text-white/85">Our team at work creating next-generation AI solutions</p>
                 </div>
               </div>
             </div>
@@ -106,8 +106,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">Growing Global Impact</h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Growing Global Impact</h2>
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Since our founding, we&apos;ve been committed to delivering exceptional results for our clients worldwide.
             </p>
           </motion.div>
@@ -135,8 +135,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">Our Values</h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Our Values</h2>
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               The principles that guide our work and define our commitment to excellence.
             </p>
           </motion.div>
@@ -157,8 +157,8 @@ export default function AboutPage() {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-semibold text-text mb-4">{value.title}</h3>
-                <p className="text-muted leading-relaxed">{value.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{value.title}</h3>
+                <p className="text-white/85 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -175,8 +175,8 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-display mb-6">Our Team Culture</h2>
-              <p className="text-xl text-muted mb-8">
+              <h2 className="text-section-hero mb-6">Our Team Culture</h2>
+              <p className="text-xl text-white/85 mb-8">
                 We foster an environment where innovation thrives, diverse perspectives are valued, and everyone is empowered to contribute to meaningful AI advancement.
               </p>
               
@@ -191,7 +191,7 @@ export default function AboutPage() {
                     className="flex items-center"
                   >
                     <div className="w-2 h-2 rounded-full bg-primary mr-3 flex-shrink-0" />
-                    <span className="text-muted">{item}</span>
+                    <span className="text-white/85">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
-                <p className="text-muted mt-6">
+                <p className="text-white/85 mt-6">
                   Diverse team working together
                 </p>
               </div>
@@ -235,10 +235,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-title mb-6">
+            <h2 className="text-section-hero mb-6">
               Join Us in Shaping the Future of AI
             </h2>
-            <p className="text-xl text-muted mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Whether you&apos;re looking to transform your organization with AI or join our team, we&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

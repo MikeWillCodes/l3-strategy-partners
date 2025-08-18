@@ -19,7 +19,7 @@ export default function AIReadinessPage() {
             <h1 className="text-hero mb-6">
               Get Your <span className="text-gradient">AI Readiness Score</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-white/85 mb-8 max-w-3xl mx-auto leading-relaxed">
               Discover where your organization stands and identify the fastest path to AI success with our comprehensive assessment.
             </p>
             <motion.div
@@ -41,7 +41,7 @@ export default function AIReadinessPage() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 hover:bg-white/5 text-text font-semibold text-lg px-8 py-4 h-auto"
+                className="border-white/20 hover:bg-white/5 text-white font-semibold text-lg px-8 py-4 h-auto"
               >
                 <a href="/services" aria-label="Learn about our AI services">
                   Learn More
@@ -65,8 +65,8 @@ export default function AIReadinessPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-display mb-6">What We Assess</h2>
-            <p className="text-xl text-muted max-w-3xl mx-auto">
+            <h2 className="text-section-hero mb-6">What We Assess</h2>
+            <p className="text-xl text-white/85 max-w-3xl mx-auto">
               Our comprehensive evaluation covers the four critical pillars of AI readiness for your organization.
             </p>
           </motion.div>
@@ -107,8 +107,8 @@ export default function AIReadinessPage() {
                     <area.icon className="h-8 w-8 text-primary" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-text mb-4">{area.title}</h3>
-                <p className="text-muted leading-relaxed">{area.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{area.title}</h3>
+                <p className="text-white/85 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
           </div>
@@ -125,8 +125,8 @@ export default function AIReadinessPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-display mb-6">What You Get</h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">What You Get</h2>
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Receive a detailed report with actionable insights and a clear roadmap for your AI journey.
             </p>
           </motion.div>
@@ -149,7 +149,7 @@ export default function AIReadinessPage() {
                 viewport={{ once: true }}
               >
                 <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <p className="text-muted">{benefit}</p>
+                <p className="text-white/85">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -166,8 +166,8 @@ export default function AIReadinessPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-display mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-white/85 mb-8 max-w-2xl mx-auto">
               Take the first step toward AI transformation. Our assessment typically takes 30-45 minutes and provides immediate value.
             </p>
             <Button

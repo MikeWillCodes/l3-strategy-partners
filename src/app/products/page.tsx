@@ -56,7 +56,7 @@ export default function ProductsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-display mb-6"
+              className="text-page-hero mb-6"
             >
               AI-Powered Products for{" "}
               <span className="text-gradient">Enterprise Scale</span>
@@ -66,7 +66,7 @@ export default function ProductsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
               Transform your organization with our suite of enterprise-grade AI products, 
               designed for scalability, security, and seamless integration.
@@ -94,8 +94,8 @@ export default function ProductsPage() {
                       <product.icon className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-text">{product.name}</h3>
-                      <p className="text-muted">{product.description}</p>
+                      <h3 className="text-2xl font-bold text-white">{product.name}</h3>
+                      <p className="text-white/85">{product.description}</p>
                     </div>
                   </div>
                   
@@ -103,7 +103,7 @@ export default function ProductsPage() {
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <div className="w-2 h-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0" />
-                        <span className="text-muted">{feature}</span>
+                        <span className="text-white/85">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -138,7 +138,7 @@ export default function ProductsPage() {
                       <h3 className="text-xl font-semibold text-gradient mb-2">
                         AI Products
                       </h3>
-                      <p className="text-muted text-sm">
+                      <p className="text-white/85 text-sm">
                         Enterprise Ready
                       </p>
                     </div>
@@ -160,10 +160,10 @@ export default function ProductsPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-title mb-6">
+            <h2 className="text-section-hero mb-6">
               Ready to Transform Your AI Capabilities?
             </h2>
-            <p className="text-xl text-muted mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Discover how our products can accelerate your AI journey and deliver measurable business value.
             </p>
             <Button 

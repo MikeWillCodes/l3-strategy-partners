@@ -55,8 +55,8 @@ export function Navbar() {
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
-              <Link href="/contact" aria-label="Book a demo with L3 Strategy Partners">
-                Book a Demo
+              <Link href="/contact" aria-label="Book a consultation with L3 Strategy Partners">
+                Book Consultation
               </Link>
             </Button>
           </div>
@@ -93,7 +93,7 @@ export function Navbar() {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                   >
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      Book a Demo
+                      Book Consultation
                     </Link>
                   </Button>
                 </div>

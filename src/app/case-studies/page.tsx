@@ -77,7 +77,7 @@ export default function CaseStudiesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-display mb-6"
+              className="text-page-hero mb-6"
             >
               Case Studies &{" "}
               <span className="text-gradient">Resources</span>
@@ -87,7 +87,7 @@ export default function CaseStudiesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
               Explore real-world AI transformations and learn how we&apos;ve helped organizations 
               across industries achieve measurable success with artificial intelligence.
@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
             className="flex flex-col lg:flex-row gap-6 items-center justify-center"
           >
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-medium text-muted mr-2">Industry:</span>
+              <span className="text-sm font-medium text-white/85 mr-2">Industry:</span>
               {industries.map((industry) => (
                 <Badge 
                   key={industry}
@@ -120,7 +120,7 @@ export default function CaseStudiesPage() {
             </div>
             
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-medium text-muted mr-2">Offering:</span>
+              <span className="text-sm font-medium text-white/85 mr-2">Offering:</span>
               {offerings.map((offering) => (
                 <Badge 
                   key={offering}
@@ -165,13 +165,13 @@ export default function CaseStudiesPage() {
                     </Badge>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-text mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">
                     {study.title}
                   </h3>
                   
                   <p className="text-sm text-primary mb-3">{study.company}</p>
                   
-                  <p className="text-muted text-sm mb-4 leading-relaxed">
+                  <p className="text-white/85 text-sm mb-4 leading-relaxed">
                     {study.description}
                   </p>
                   
@@ -211,10 +211,10 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-title mb-6">
+            <h2 className="text-section-hero mb-6">
               Ready to Create Your Own Success Story?
             </h2>
-            <p className="text-xl text-muted mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Join the growing list of organizations transforming their business with AI. 
               Let&apos;s discuss how we can help you achieve similar results.
             </p>

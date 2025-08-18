@@ -53,7 +53,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-display mb-6"
+              className="text-page-hero mb-6"
             >
               Let&apos;s Build the Future of{" "}
               <span className="text-gradient">AI Together</span>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
               Ready to transform your organization with AI? Our experts are here to help. Tell us about your project and let&apos;s start the conversation.
             </motion.p>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-title mb-8">Get in Touch</h2>
+                <h2 className="text-section-hero mb-8">Get in Touch</h2>
                 <ContactForm />
               </motion.div>
             </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="card p-8"
               >
-                <h3 className="text-xl font-semibold text-text mb-6">Contact Information</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <motion.div
@@ -110,16 +110,16 @@ export default function ContactPage() {
                         <info.icon className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm text-muted">{info.label}</p>
+                        <p className="text-sm text-white/85">{info.label}</p>
                         {info.href !== "#" ? (
                           <a 
                             href={info.href}
-                            className="text-text hover:text-primary transition-colors font-medium"
+                            className="text-white hover:text-primary transition-colors font-medium"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-text font-medium">{info.value}</p>
+                          <p className="text-white font-medium">{info.value}</p>
                         )}
                       </div>
                     </motion.div>
@@ -137,10 +137,10 @@ export default function ContactPage() {
                 <div className="card p-8 text-center relative overflow-hidden">
                   {/* Gradient Spheres Illustration */}
                   <div className="relative z-10">
-                    <h3 className="text-lg font-semibold text-text mb-4">
+                    <h3 className="text-lg font-semibold text-white mb-4">
                       Ready to Scale Your AI?
                     </h3>
-                    <p className="text-muted text-sm mb-6">
+                    <p className="text-white/85 text-sm mb-6">
                       Join hundreds of organizations transforming their business with AI.
                     </p>
                     

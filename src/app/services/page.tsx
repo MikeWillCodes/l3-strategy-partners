@@ -106,7 +106,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-display mb-6"
+              className="text-page-hero mb-6"
             >
               Expert AI Consulting{" "}
               <span className="text-gradient">Services</span>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
               From strategy to implementation, our comprehensive consulting services help 
               organizations harness the full potential of artificial intelligence.
@@ -144,9 +144,9 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-text mb-3">{service.title}</h3>
-                <p className="text-muted text-sm mb-4">{service.description}</p>
-                <p className="text-muted text-sm leading-relaxed">{service.details}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-white/85 text-sm mb-4">{service.description}</p>
+                <p className="text-white/85 text-sm leading-relaxed">{service.details}</p>
               </motion.div>
             ))}
           </div>
@@ -163,8 +163,8 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">Our Engagement Process</h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Our Engagement Process</h2>
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               A proven three-step approach to AI transformation
             </p>
           </motion.div>
@@ -182,8 +182,8 @@ export default function ServicesPage() {
                 <div className="text-gradient text-6xl font-bold mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-text mb-3">{step.title}</h3>
-                <p className="text-muted">{step.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-white/85">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -200,8 +200,8 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Common questions about our AI consulting services
             </p>
           </motion.div>
@@ -214,10 +214,10 @@ export default function ServicesPage() {
                   value={`item-${index}`}
                   className="card px-6"
                 >
-                  <AccordionTrigger className="text-text hover:text-primary">
+                  <AccordionTrigger className="text-white hover:text-primary">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted">
+                  <AccordionContent className="text-white/85">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -237,10 +237,10 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-title mb-6">
+            <h2 className="text-section-hero mb-6">
               Ready to Start Your AI Journey?
             </h2>
-            <p className="text-xl text-muted mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Let&apos;s discuss how our consulting services can help transform your organization.
             </p>
             <Button 

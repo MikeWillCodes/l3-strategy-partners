@@ -115,6 +115,14 @@
     @apply text-6xl lg:text-8xl font-light tracking-tighter;
   }
   
+  .text-page-hero {
+    @apply text-4xl lg:text-6xl font-light tracking-tight text-white;
+  }
+  
+  .text-section-hero {
+    @apply text-3xl lg:text-4xl font-light tracking-tight text-white;
+  }
+  
   .text-display {
     @apply text-4xl lg:text-6xl font-bold tracking-tight;
   }
