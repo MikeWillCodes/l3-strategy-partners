@@ -23,29 +23,9 @@ import {
 
 const features = [
   {
-    icon: Lightbulb,
-    title: "AI Adoption",
-    description: "Plan pilots and scale wins across teams."
-  },
-  {
     icon: Brain,
-    title: "AI Strategy & Consulting",
-    description: "Roadmap, operating model, and governance."
-  },
-  {
-    icon: Database,
-    title: "Data Modernization",
-    description: "Cloud data foundations and real-time pipelines."
-  },
-  {
-    icon: Settings,
-    title: "Automation",
-    description: "Workflow automation that saves hours each week."
-  },
-  {
-    icon: Zap,
-    title: "Tailored AI Solutions",
-    description: "Custom co-pilots and domain models."
+    title: "AI Strategy & Adoption",
+    description: "From pilot to scale with governance and change management."
   },
   {
     icon: CheckCircle,
@@ -61,6 +41,16 @@ const features = [
     icon: Users,
     title: "Customer Experience Optimization",
     description: "AI-assisted service and personalization."
+  },
+  {
+    icon: Settings,
+    title: "Process Automation",
+    description: "Automations that save hours each week."
+  },
+  {
+    icon: Zap,
+    title: "Tailored AI Solutions",
+    description: "Custom co-pilots and domain models."
   }
 ];
 
@@ -76,6 +66,9 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero />
+
+      {/* Trusted By Logos */}
+      <LogosMarquee />
 
       {/* Features Section */}
       <section className="py-20 lg:py-32">
@@ -140,9 +133,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Logos Marquee */}
-      <LogosMarquee />
 
       {/* Testimonial Section */}
       <section className="py-20 lg:py-32">
