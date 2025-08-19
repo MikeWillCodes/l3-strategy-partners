@@ -29,7 +29,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl lg:text-2xl text-muted mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl lg:text-2xl text-white/85 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             L3 delivers proven strategies to modernize, automate, and improve business outcomes for SMBs and mid-market organizations.
           </motion.p>
@@ -55,7 +55,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/20 hover:bg-white/5 text-text font-semibold text-lg px-8 py-4 h-auto"
+              className="border-white/20 hover:bg-white/5 text-white font-semibold text-lg px-8 py-4 h-auto"
             >
               <Link href="/ai-readiness" aria-label="Get your AI readiness score">
                 <Play className="mr-2 h-5 w-5" />
