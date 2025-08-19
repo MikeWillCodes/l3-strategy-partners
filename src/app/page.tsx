@@ -80,10 +80,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">
+            <h2 className="text-section-hero mb-6">
               Comprehensive AI Solutions for SMB & Mid-Market
             </h2>
-            <p className="text-xl text-muted max-w-3xl mx-auto">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto">
               From strategy to implementation, we provide end-to-end AI consulting services 
               to help your organization harness the full potential of artificial intelligence.
             </p>
@@ -113,10 +113,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-display mb-6">
+            <h2 className="text-section-hero mb-6">
               Proven Track Record
             </h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Our expertise speaks through measurable results and successful AI transformations.
             </p>
           </motion.div>
