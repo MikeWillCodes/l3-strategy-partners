@@ -2,16 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = {
-  "Products": [
-    { name: "Data Engine", href: "/products#data-engine" },
-    { name: "Model Evaluation", href: "/products#model-evaluation" },
-    { name: "GenAI Platform", href: "/products#genai-platform" },
-  ],
   "Services": [
     { name: "AI Strategy", href: "/services#ai-strategy" },
-    { name: "Data Modernization", href: "/services#data-modernization" },
-    { name: "Model Operations", href: "/services#model-ops" },
-    { name: "Safety & Alignment", href: "/services#safety" },
+    { name: "AI Readiness Score", href: "/services#ai-readiness" },
+    { name: "Digital Modernization", href: "/services#digital-modernization" },
+    { name: "Process Automation", href: "/services#process-automation" },
   ],
   "Company": [
     { name: "About Us", href: "/about" },
