@@ -14,9 +14,7 @@ import {
   Calendar,
   TrendingUp
 } from "lucide-react";
-import { ServicesConstellation } from "@/components/graphics/ServicesConstellation";
 import { ThreeStepProcess } from "@/components/graphics/ThreeStepProcess";
-import { useState } from "react";
 
 const services = [
   {
@@ -144,8 +142,6 @@ const packages = [
 ];
 
 export default function ServicesPage() {
-  const [highlightedService, setHighlightedService] = useState<string | null>(null);
-
   const handleStepClick = (stepId: string) => {
     // Smooth scroll to engagement process accordion
     const element = document.getElementById('engagement-process');
@@ -180,21 +176,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Constellation */}
-      <section className="py-12">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <ServicesConstellation onServiceHover={setHighlightedService} />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Services Grid */}
       <section className="py-20">
         <div className="container">
@@ -206,9 +187,7 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`card p-6 hover:bg-panel-strong transition-colors duration-300 group cursor-pointer ${
-                  highlightedService === service.anchor ? 'ring-2 ring-primary/30' : ''
-                }`}
+                className="card p-6 hover:bg-panel-strong transition-colors duration-300 group cursor-pointer"
                 onClick={() => {
                   const element = document.getElementById(service.anchor);
                   element?.scrollIntoView({ behavior: 'smooth' });
