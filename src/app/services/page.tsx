@@ -61,9 +61,10 @@ const serviceDetails = [
     title: "AI Strategy & Adoption",
     subtitle: "Who it's for: Leaders who need an AI roadmap and a way to scale wins.",
     outcomes: [
-      "Aligned vision, prioritized use-cases, and ROI model",
-      "Governance (risk, data, ethics), operating model, and adoption plan", 
-      "Change management and training playbook"
+      "Aligned vision and prioritized use-cases tied to measurable business value.",
+      "Governance model (risk, data, ethics) and adoption plan.",
+      "12-month roadmap with dependencies and investment profile.",
+      "Change-management playbook and training paths."
     ],
     deliverables: "Strategy deck, 12-month roadmap, governance charter, use-case backlog, training plan",
     timeline: "4–6 weeks",
@@ -75,6 +76,12 @@ const serviceDetails = [
     id: "ai-readiness",
     title: "AI Readiness Score", 
     subtitle: "What you get: A 360° score across People, Data, Tech, Process, Risk with quick wins.",
+    outcomes: [
+      "Baseline maturity score across People, Data, Tech, Process, Risk with benchmark.",
+      "Top 10 quick wins prioritized by impact/effort.",
+      "Gap analysis for data, platform, and policy.",
+      "30-60-90 plan with owners and checkpoints."
+    ],
     deliverables: "Benchmark scorecard, maturity heatmap, top 10 opportunities, 30-60-90 plan",
     timeline: "10 business days",
     kpis: "Baseline vs. target readiness, # quick wins shipped in 30 days",
@@ -85,6 +92,12 @@ const serviceDetails = [
     id: "digital-modernization",
     title: "Digital Modernization Blueprint (90 days)",
     subtitle: "Focus: Data foundations, platform choices, and integration plan.",
+    outcomes: [
+      "Target reference architecture (incl. RAG patterns) and platform choice rationale.",
+      "Sequenced migration plan with cost envelope and risk controls.",
+      "Reusable integration patterns and dev guardrails.",
+      "Backlog with estimates for the first 90 days."
+    ],
     deliverables: "Target architecture, reference patterns (including RAG), backlog with estimates, migration plan, cost envelope",
     timeline: "3–4 weeks planning + 90-day execution plan",
     kpis: "Data pipeline reliability, latency, cost per inference/process, security posture",
@@ -95,6 +108,12 @@ const serviceDetails = [
     id: "customer-experience",
     title: "Customer Experience Optimization",
     subtitle: "Use-cases: AI triage, agent assist, self-service, personalization.",
+    outcomes: [
+      "Faster resolution with agent assist and smart self-service.",
+      "Higher CSAT and reduced average handle time.",
+      "Personalization playbook across key journeys.",
+      "Analytics + guardrails for quality and safety."
+    ],
     deliverables: "Journey map with AI moments, bot/agent flows, pilot build, analytics and guardrails",
     timeline: "4–8 weeks to first pilot",
     kpis: "CSAT, first-contact resolution, average handle time, deflection rate, revenue per visitor",
@@ -105,6 +124,12 @@ const serviceDetails = [
     id: "process-automation",
     title: "Process Automation", 
     subtitle: "Scope: Identify high-ROI automations across finance, ops, sales, and support.",
+    outcomes: [
+      "Hours saved and throughput increased in priority workflows.",
+      "Error rate and rework reduced with auditable steps.",
+      "SLA adherence improved with alerts and dashboards.",
+      "Enablement kit so teams can scale automations."
+    ],
     deliverables: "Automation backlog, 2–3 pilots, documentation, training",
     timeline: "2–6 weeks to first production automation",
     kpis: "Hours saved/month, error rate, throughput, SLA adherence",
@@ -115,6 +140,12 @@ const serviceDetails = [
     id: "tailored-solutions",
     title: "Tailored AI Solutions",
     subtitle: "Examples: Team co-pilots, industry copilots, forecasting, compliance summarization, custom RAG apps.",
+    outcomes: [
+      "Working prototype to production with clear acceptance tests.",
+      "Secure data integrations and evaluation harness.",
+      "Safety checklist and monitoring for drift/quality.",
+      "Documented runbook for handoff and iteration."
+    ],
     deliverables: "Solution spec, prototype, integration, evaluation + safety checklist",
     timeline: "6–10 weeks typical MVP",
     kpis: "Task completion rate, speed-to-answer, cost per task, accuracy",
@@ -127,17 +158,41 @@ const packages = [
   {
     name: "Starter",
     duration: "2 weeks",
-    description: "Discovery, readiness score, quick-wins plan"
+    description: "Perfect for exploring AI opportunities and quick wins",
+    benefits: [
+      "AI readiness assessment",
+      "Top 5 quick wins identified", 
+      "30-day action plan"
+    ],
+    cta: "Get Started",
+    ctaLink: "/contact",
+    popular: false
   },
   {
     name: "Sprint", 
     duration: "6 weeks",
-    description: "Roadmap, governance, 1–2 pilots shipped"
+    description: "Ideal for building your AI foundation and first pilots",
+    benefits: [
+      "Complete AI strategy & roadmap",
+      "2-3 pilots shipped to production",
+      "Governance model & training"
+    ],
+    cta: "Plan My Sprint",
+    ctaLink: "/contact",
+    popular: true
   },
   {
     name: "Scale",
     duration: "12 weeks", 
-    description: "Platform patterns, runbook, 3–5 use-cases live"
+    description: "Comprehensive transformation with multiple use cases",
+    benefits: [
+      "Platform architecture & patterns",
+      "5+ use cases in production", 
+      "Runbook for scaling AI"
+    ],
+    cta: "Scale with L3",
+    ctaLink: "/contact",
+    popular: false
   }
 ];
 
@@ -172,6 +227,27 @@ export default function ServicesPage() {
             >
               From strategy to implementation, we help SMBs and mid-market organizations turn AI into measurable business outcomes.
             </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <Button 
+                asChild 
+                size="lg" 
+                className="text-lg px-8 py-4 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                data-analytics="services_hero_cta_click"
+              >
+                <Link 
+                  href="/contact"
+                  aria-label="Book Consultation on Services page"
+                >
+                  Book Consultation
+                </Link>
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -298,7 +374,7 @@ export default function ServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -306,11 +382,56 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="card p-6 text-center"
+                className={`relative card p-8 text-center min-h-[260px] min-w-[360px] group cursor-pointer hover:scale-105 hover:ring-2 hover:ring-primary/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-primary/50 ${
+                  pkg.popular ? 'border-primary/50 bg-primary/5' : ''
+                }`}
+                onClick={() => {
+                  window.location.href = pkg.ctaLink;
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label={`${pkg.name} package - ${pkg.description}`}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.location.href = pkg.ctaLink;
+                  }
+                }}
               >
-                <h3 className="text-xl font-semibold text-white mb-2">{pkg.name}</h3>
-                <p className="text-primary font-medium mb-4">{pkg.duration}</p>
-                <p className="text-white/85 text-sm">{pkg.description}</p>
+                {pkg.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-primary text-black text-xs font-semibold px-3 py-1 rounded-full">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                  <p className="text-primary font-semibold text-lg mb-3">{pkg.duration}</p>
+                  <p className="text-white/85 text-sm mb-4">{pkg.description}</p>
+                </div>
+                
+                <div className="space-y-2 mb-8">
+                  {pkg.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center justify-center text-sm text-white/85">
+                      <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-auto">
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-primary hover:bg-primary/90 text-black font-semibold group-hover:scale-105 transition-transform duration-200"
+                    data-analytics="services_package_cta_click"
+                    aria-label={`${pkg.cta} - ${pkg.name} package`}
+                  >
+                    {pkg.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </motion.div>
             ))}
           </div>
