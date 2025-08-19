@@ -472,7 +472,7 @@ export default function ServicesPage() {
               Ready to Start Your AI Journey?
             </h2>
             <p className="text-xl text-white/85 mb-8">
-              Let's discuss how our consulting services can help transform your organization.
+              Let&apos;s discuss how our consulting services can help transform your organization.
             </p>
             <Button 
               asChild

@@ -4,67 +4,54 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const caseStudies = [
   {
-    title: "Global Manufacturing AI Transformation",
-    company: "TechManufacturing Corp",
+    title: "Smart Manufacturing Modernization",
+    company: "Private Company",
     industry: "Manufacturing",
-    type: "Case Study",
-    description: "Implemented end-to-end AI solutions resulting in 40% reduction in production downtime and $50M annual savings.",
-    image: "/api/placeholder/400/250",
-    tags: ["AI Strategy", "Predictive Maintenance", "Quality Control"]
+    description: "Reduced downtime by 18% and saved $850K annually with predictive AI maintenance and real-time quality inspections.",
+    slug: "smart-manufacturing-modernization"
   },
   {
-    title: "Healthcare Data Platform Migration",
-    company: "MedTech Solutions",
+    title: "Healthcare Data Platform Upgrade",
+    company: "Private Company", 
     industry: "Healthcare",
-    type: "Partner Case",
-    description: "Modernized legacy data systems to support real-time analytics and AI-powered diagnostic tools.",
-    image: "/api/placeholder/400/250",
-    tags: ["Data Modernization", "Healthcare AI", "Compliance"]
+    description: "Improved diagnostic accuracy by 12% and cut reporting time by 35% through data modernization and real-time analytics.",
+    slug: "healthcare-data-platform-upgrade"
   },
   {
-    title: "Financial Services Risk Management",
-    company: "Global Bank Inc",
-    industry: "Financial Services",
-    type: "Case Study",
-    description: "Deployed ML models for fraud detection and risk assessment, reducing false positives by 60%.",
-    image: "/api/placeholder/400/250",
-    tags: ["ML Models", "Risk Management", "Fraud Detection"]
+    title: "Banking Risk Management Transformation",
+    company: "Private Company",
+    industry: "Financial Services", 
+    description: "Decreased fraud losses by $1.2M annually and reduced false positives by 28% using machine learning (ML)–based risk models.",
+    slug: "banking-risk-management-transformation"
   },
   {
-    title: "Autonomous Vehicle Safety Platform",
-    company: "AutoTech Innovations",
+    title: "Autonomous Vehicle Safety Framework",
+    company: "Private Company",
     industry: "Automotive",
-    type: "Partner Case",
-    description: "Built comprehensive safety validation framework for autonomous driving systems.",
-    image: "/api/placeholder/400/250",
-    tags: ["Autonomous Vehicles", "Safety", "Validation"]
+    description: "Accelerated regulatory approval by 15% and lowered testing costs by $600K with an AI-driven safety validation system.",
+    slug: "autonomous-vehicle-safety-framework"
   },
   {
-    title: "Government AI Ethics Framework",
-    company: "Federal Agency",
+    title: "AI Governance & Ethics Program",
+    company: "Private Company",
     industry: "Public Sector",
-    type: "Case Study",
-    description: "Developed responsible AI guidelines and governance framework for federal AI initiatives.",
-    image: "/api/placeholder/400/250",
-    tags: ["AI Ethics", "Governance", "Public Sector"]
+    description: "Delivered responsible AI guidelines and governance playbooks, reducing compliance risk exposure by 22%.",
+    slug: "ai-governance-ethics-program"
   },
   {
     title: "Retail Personalization Engine",
-    company: "E-Commerce Leader",
+    company: "Private Company",
     industry: "Retail",
-    type: "Partner Case",
-    description: "Created AI-powered recommendation system increasing customer engagement by 35%.",
-    image: "/api/placeholder/400/250",
-    tags: ["Personalization", "Recommendations", "E-Commerce"]
+    description: "Increased engagement by 18% and generated an additional $3.5M in annual revenue with an AI-powered recommendation system.",
+    slug: "retail-personalization-engine"
   }
 ];
 
-const industries = ["All", "Manufacturing", "Healthcare", "Financial Services", "Automotive", "Public Sector", "Retail"];
-const offerings = ["All", "AI Strategy", "Data Modernization", "ML Models", "Safety", "Ethics"];
+
 
 export default function CaseStudiesPage() {
   return (
@@ -79,8 +66,7 @@ export default function CaseStudiesPage() {
               transition={{ duration: 0.8 }}
               className="text-page-hero mb-6"
             >
-              Case Studies &{" "}
-              <span className="text-gradient">Resources</span>
+              Client <span className="text-gradient">Success Stories</span>
             </motion.h1>
             
             <motion.p
@@ -89,51 +75,14 @@ export default function CaseStudiesPage() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
-              Explore real-world AI transformations and learn how we&apos;ve helped organizations 
-              across industries achieve measurable success with artificial intelligence.
+              See how L3 helps small and mid-sized businesses modernize, scale, and compete with AI-powered solutions. 
+              Each story highlights the challenge, the strategy, and the measurable results achieved.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="pb-12">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col lg:flex-row gap-6 items-center justify-center"
-          >
-            <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-medium text-white/85 mr-2">Industry:</span>
-              {industries.map((industry) => (
-                <Badge 
-                  key={industry}
-                  variant={industry === "All" ? "default" : "outline"}
-                  className="cursor-pointer hover:bg-primary/20"
-                >
-                  {industry}
-                </Badge>
-              ))}
-            </div>
-            
-            <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-medium text-white/85 mr-2">Offering:</span>
-              {offerings.map((offering) => (
-                <Badge 
-                  key={offering}
-                  variant={offering === "All" ? "default" : "outline"}
-                  className="cursor-pointer hover:bg-primary/20"
-                >
-                  {offering}
-                </Badge>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Case Studies Grid */}
       <section className="pb-20">
@@ -142,59 +91,44 @@ export default function CaseStudiesPage() {
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.25, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="card overflow-hidden hover:bg-panel-strong transition-colors duration-300 group"
+                className="group"
               >
-                {/* Image Placeholder */}
-                <div className="h-48 bg-gradient-to-r from-primary/20 to-purple-600/20 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg/60 to-transparent" />
-                  <div className="absolute top-4 right-4">
-                    <Badge variant={study.type === "Case Study" ? "default" : "secondary"}>
-                      {study.type}
-                    </Badge>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="mb-3">
-                    <Badge variant="outline" className="text-xs">
-                      {study.industry}
-                    </Badge>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">
-                    {study.title}
-                  </h3>
-                  
-                  <p className="text-sm text-primary mb-3">{study.company}</p>
-                  
-                  <p className="text-white/85 text-sm mb-4 leading-relaxed">
-                    {study.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {study.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
-                        {tag}
+                <Link href={`/case-studies/${study.slug}`}>
+                  <div className="relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-[16px] shadow-[0_0_40px_rgba(0,0,0,0.35)] p-6 h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_8px_60px_rgba(123,92,255,0.15)] hover:border-white/20 hover:bg-white/[0.06] cursor-pointer">
+                    {/* Industry pill */}
+                    <div className="mb-4">
+                      <Badge 
+                        variant="outline" 
+                        className="px-3 py-1 text-xs font-medium bg-white/5 border-white/20 text-white/90 hover:bg-white/10"
+                      >
+                        {study.industry}
                       </Badge>
-                    ))}
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gradient transition-colors duration-300">
+                      {study.title}
+                    </h3>
+                    
+                    {/* Client label */}
+                    <p className="text-sm text-primary mb-4 font-medium">{study.company}</p>
+                    
+                    {/* Teaser copy */}
+                    <p className="text-white/85 text-sm mb-6 leading-relaxed">
+                      {study.description}
+                    </p>
+                    
+                    {/* CTA */}
+                    <div className="flex items-center text-primary group-hover:text-white transition-all duration-300">
+                      <span className="text-sm font-medium group-hover:underline">Read Case Study</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
                   </div>
-                  
-                  <Button 
-                    asChild
-                    variant="ghost"
-                    size="sm"
-                    className="text-primary hover:text-primary hover:bg-primary/10 p-0"
-                  >
-                    <Link href="#" className="inline-flex items-center">
-                      Read Case Study
-                      <ExternalLink className="ml-1 h-3 w-3" />
-                    </Link>
-                  </Button>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -212,19 +146,15 @@ export default function CaseStudiesPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h2 className="text-section-hero mb-6">
-              Ready to Create Your Own Success Story?
+              Ready to explore what AI can do for your business?
             </h2>
-            <p className="text-xl text-white/85 mb-8">
-              Join the growing list of organizations transforming their business with AI. 
-              Let&apos;s discuss how we can help you achieve similar results.
-            </p>
             <Button 
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Link href="/contact">
-                Start Your Transformation
+                Book a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
