@@ -302,7 +302,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-section-hero mb-4">{service.title}</h2>
+                <h2 className="text-section-hero-gradient mb-4">{service.title}</h2>
                 <p className="text-xl text-white/85 mb-8">{service.subtitle}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -368,7 +368,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-section-hero mb-6">Service Packages</h2>
+            <h2 className="text-section-hero-gradient mb-6">Service Packages</h2>
             <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Choose the engagement model that fits your timeline and transformation goals.
             </p>
@@ -448,7 +448,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-section-hero mb-6">Our Engagement Process</h2>
+            <h2 className="text-section-hero-gradient mb-6">Our Engagement Process</h2>
             <p className="text-xl text-white/85 max-w-2xl mx-auto">
               A proven three-step approach to AI transformation
             </p>
