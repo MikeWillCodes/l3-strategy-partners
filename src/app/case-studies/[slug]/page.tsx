@@ -195,10 +195,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "5 months"
     },
-    challenge: "A small med spa network struggled with customer retention and marketing effectiveness across its locations. The business lacked integrated customer analytics to understand treatment preferences, booking patterns, and customer lifecycle value. Manual marketing efforts were inefficient and couldn't deliver personalized experiences. Without data-driven insights, the spas missed opportunities to optimize service offerings and maximize customer lifetime value while maintaining HIPAA-aligned governance.",
-    solution: "L3 implemented a HIPAA-aligned growth marketing analytics platform with AI-driven customer segmentation and lifecycle marketing. Our solution analyzed de-identified customer data to identify treatment preferences, optimal engagement timing, and personalized marketing opportunities. The platform included automated marketing workflows, customer segmentation models, and predictive analytics for service demand. All systems were designed with strict privacy protections and HIPAA compliance.",
-    impact: "• Boosted repeat visits by 23% through AI-driven customer segmentation\n• Increased annual revenue by $1.2M with lifecycle marketing optimization\n• Enhanced customer lifetime value by 30% through personalized experiences\n• Improved marketing ROI by 40% with targeted campaign automation\n• Achieved 95% customer satisfaction through personalized service recommendations",
-    compliance: "All customer data processing utilizes de-identified and aggregated information in full HIPAA compliance. The platform implements advanced encryption, role-based access controls, and comprehensive audit trails to ensure customer privacy protection throughout the marketing analytics process.",
+    challenge: "A regional med spa network faced declining customer retention and inefficient marketing efforts across multiple locations. Without integrated analytics, the business lacked insight into treatment preferences, booking behaviors, and customer lifetime value. Manual campaigns delivered poor personalization, while missed engagement opportunities limited growth. The absence of data-driven marketing prevented the spas from maximizing repeat visits, upsell potential, and long-term customer relationships — all while maintaining HIPAA governance requirements.",
+    solution: "L3 deployed a HIPAA-aligned growth marketing analytics platform, designed to transform customer engagement through AI-driven segmentation and lifecycle marketing. After conducting an AI Readiness Score, we implemented de-identified data analysis to identify treatment trends, optimal outreach timing, and upsell opportunities.\n\nWhat we delivered:\n\n• AI-Driven Customer Segmentation: Grouped patients by treatment history, engagement timing, and preferences.\n\n• Lifecycle Marketing Optimization: Personalized campaigns tailored to retention, upsell, and reactivation goals.\n\n• Automated Campaign Workflows: Targeted engagement campaigns triggered by patient activity.\n\n• Predictive Analytics: Forecasted service demand and revenue opportunities using historical patterns.\n\n• HIPAA Compliance Controls: De-identified data, encryption, access controls, and audit trails.",
+    impact: "• 23% increase in repeat visits via AI-driven customer segmentation\n• $1.2M in new annual revenue through lifecycle optimization\n• 30% higher customer lifetime value with personalized offers\n• 40% improvement in marketing ROI through campaign automation\n• 95% customer satisfaction achieved through tailored recommendations",
+    compliance: "The solution was fully HIPAA-compliant, with safeguards including advanced encryption, role-based access controls, and automated audit trails. All data was de-identified before analysis, ensuring that personalized marketing never compromised privacy. This compliance-first design gave leadership confidence in scaling AI-driven engagement while protecting sensitive health information.",
     testimonial: {
       quote: "The growth marketing platform has transformed our customer relationships and business performance while maintaining the highest privacy standards.",
       author: "Business Owner",
@@ -415,6 +415,21 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   </p>
                   <p className="text-lg text-white/85 leading-relaxed">
                     Leadership needed a secure, automated system to improve appointment utilization and patient satisfaction.
+                  </p>
+                </div>
+              ) : slug === 'med-spa-growth-marketing-analytics' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A regional med spa network faced declining customer retention and inefficient marketing efforts across multiple locations.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Without integrated analytics, the business lacked insight into treatment preferences, booking behaviors, and customer lifetime value.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual campaigns delivered poor personalization, while missed engagement opportunities limited growth.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    The absence of data-driven marketing prevented the spas from maximizing repeat visits, upsell potential, and long-term customer relationships — all while maintaining HIPAA governance requirements.
                   </p>
                 </div>
               ) : (
@@ -640,6 +655,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'med-spa-growth-marketing-analytics' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 deployed a HIPAA-aligned growth marketing analytics platform, designed to transform customer engagement through AI-driven segmentation and lifecycle marketing. After conducting an AI Readiness Score, we implemented de-identified data analysis to identify treatment trends, optimal outreach timing, and upsell opportunities.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>AI-Driven Customer Segmentation:</strong> Grouped patients by treatment history, engagement timing, and preferences.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Lifecycle Marketing Optimization:</strong> Personalized campaigns tailored to retention, upsell, and reactivation goals.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Automated Campaign Workflows:</strong> Targeted engagement campaigns triggered by patient activity.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Predictive Analytics:</strong> Forecasted service demand and revenue opportunities using historical patterns.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>HIPAA Compliance Controls:</strong> De-identified data, encryption, access controls, and audit trails.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -718,6 +759,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">Enhanced patient satisfaction scores by 20% with personalized communications</li>
                   <li className="leading-relaxed">Improved operational efficiency with 90% automation of reminders</li>
                   <li className="leading-relaxed">Increased appointment booking rates by 15% through optimized scheduling</li>
+                </ul>
+              ) : slug === 'med-spa-growth-marketing-analytics' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">23% increase in repeat visits via AI-driven customer segmentation</li>
+                  <li className="leading-relaxed">$1.2M in new annual revenue through lifecycle optimization</li>
+                  <li className="leading-relaxed">30% higher customer lifetime value with personalized offers</li>
+                  <li className="leading-relaxed">40% improvement in marketing ROI through campaign automation</li>
+                  <li className="leading-relaxed">95% customer satisfaction achieved through tailored recommendations</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -798,6 +847,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to optimize routes and cut logistics costs?'
                   : slug === 'dental-network-patient-engagement'
                   ? 'Ready to reduce no-shows and unlock new revenue with AI-powered engagement?'
+                  : slug === 'med-spa-growth-marketing-analytics'
+                  ? 'Ready to boost retention and revenue with compliant AI marketing?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
