@@ -131,7 +131,7 @@ const caseStudyDetails = {
       engagement: "4 months"
     },
     challenge: "A mid-market real estate developer struggled with inefficient leasing processes and limited insights into tenant behavior patterns. Manual market analysis couldn't provide real-time visibility into leasing opportunities and tenant preferences. The lack of predictive modeling made it difficult to optimize lease terms, pricing strategies, and property positioning. Without data-driven insights, the company missed opportunities to maximize net operating income (NOI) and improve portfolio performance.",
-    solution: "L3 developed a comprehensive portfolio intelligence platform with tenant behavior analytics and predictive lease modeling. Our solution included market analysis dashboards, tenant segmentation models, and automated lease optimization tools. We implemented machine learning algorithms to predict tenant preferences, optimal lease terms, and market timing. The platform integrated with existing property management systems to provide real-time insights into portfolio performance and leasing opportunities.",
+    solution: "L3 developed a comprehensive portfolio intelligence platform with tenant behavior analytics and predictive lease modeling. Our solution included market analysis dashboards, tenant segmentation models, and automated lease optimization tools. We implemented machine learning algorithms to predict tenant preferences, optimal lease terms, and market timing. The platform integrated with existing property management systems to provide real-time insights into portfolio performance and leasing opportunities.\n\nWhat we delivered:\n\n• Market analysis dashboards with real-time visibility into tenant behavior and leasing trends\n\n• Tenant segmentation models to improve targeting and retention\n\n• Predictive lease modeling for optimal terms, pricing, and timing\n\n• Automated lease optimization tools to reduce manual processes\n\n• Integration with property management systems for seamless operations",
     impact: "• Improved leasing efficiency by 22% through tenant behavior analytics\n• Generated $2M in additional NOI through optimized lease modeling\n• Enhanced market positioning with 95% accuracy in demand prediction\n• Reduced vacancy periods by 18% with predictive leasing strategies\n• Increased portfolio ROI by 15% through data-driven decision making",
     testimonial: {
       quote: "The portfolio intelligence platform has given us unprecedented insights into our market and significantly improved our leasing performance.",
@@ -371,6 +371,21 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Without predictive analytics, the firm was unable to identify risks early or implement corrective action, leading to missed deadlines, strained client trust, and rising operational costs.
                   </p>
                 </div>
+              ) : slug === 'real-estate-portfolio-intelligence' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A mid-market real estate developer struggled with inefficient leasing processes and limited insights into tenant behavior patterns.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual market analysis couldn't provide real-time visibility into leasing opportunities and tenant preferences.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    The lack of predictive modeling made it difficult to optimize lease terms, pricing strategies, and property positioning.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Without data-driven insights, the company missed opportunities to maximize net operating income (NOI) and improve portfolio performance.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -516,6 +531,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'real-estate-portfolio-intelligence' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 developed a comprehensive portfolio intelligence platform with tenant behavior analytics and predictive lease modeling. Our solution included market analysis dashboards, tenant segmentation models, and automated lease optimization tools. We implemented machine learning algorithms to predict tenant preferences, optimal lease terms, and market timing. The platform integrated with existing property management systems to provide real-time insights into portfolio performance and leasing opportunities.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Market analysis dashboards</strong> with real-time visibility into tenant behavior and leasing trends
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Tenant segmentation models</strong> to improve targeting and retention
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Predictive lease modeling</strong> for optimal terms, pricing, and timing
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Automated lease optimization tools</strong> to reduce manual processes
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Integration with property management systems</strong> for seamless operations
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -570,6 +611,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">20% improvement in delivery timelines with real-time tracking</li>
                   <li className="leading-relaxed">90% accuracy in subcontractor performance monitoring</li>
                   <li className="leading-relaxed">18% increase in project profitability via better resource allocation</li>
+                </ul>
+              ) : slug === 'real-estate-portfolio-intelligence' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">Improved leasing efficiency by 22% through tenant behavior analytics</li>
+                  <li className="leading-relaxed">Generated $2M in additional NOI through optimized lease modeling</li>
+                  <li className="leading-relaxed">Enhanced market positioning with 95% accuracy in demand prediction</li>
+                  <li className="leading-relaxed">Reduced vacancy periods by 18% with predictive leasing strategies</li>
+                  <li className="leading-relaxed">Increased portfolio ROI by 15% through data-driven decision making</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -644,6 +693,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to modernize your accounting workflows and save hundreds of hours?'
                   : slug === 'construction-project-analytics'
                   ? 'Ready to cut overruns and increase profitability?'
+                  : slug === 'real-estate-portfolio-intelligence'
+                  ? 'Ready to achieve similar results?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
