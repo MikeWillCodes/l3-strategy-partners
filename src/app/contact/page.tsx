@@ -1,27 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { GradientOrb } from "@/components/ui/GradientOrb";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@l3strategy.com",
-    href: "mailto:hello@l3strategy.com"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567"
+    value: "info@l3strategypartners.com",
+    href: "mailto:info@l3strategypartners.com"
   },
   {
     icon: MapPin,
     label: "Headquarters",
-    value: "San Francisco, CA",
+    value: "Houston, Texas",
     href: "#"
   },
   {
@@ -53,19 +49,19 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-page-hero mb-6"
+              className="text-4xl lg:text-6xl font-light tracking-tight text-white mb-8"
             >
-              Let&apos;s Build the Future of{" "}
-              <span className="text-gradient">AI Together</span>
+              Connect with{" "}
+              <span className="text-gradient">L3</span>
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
+              className="text-xl leading-relaxed text-white/90 mb-10 max-w-4xl mx-auto"
             >
-              Ready to transform your organization with AI? Our experts are here to help. Tell us about your project and let&apos;s start the conversation.
+              Tell us about your goals and challenges. Our team will review your request and respond within 24 hours with next steps.
             </motion.p>
           </div>
         </div>
@@ -106,20 +102,20 @@ export default function ContactPage() {
                       transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                       className="flex items-center space-x-3"
                     >
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <info.icon className="h-4 w-4 text-primary" />
+                      <div className="p-3 rounded-lg bg-primary/10">
+                        <info.icon className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm text-white/85">{info.label}</p>
+                        <p className="text-sm text-white/85 font-medium">{info.label}</p>
                         {info.href !== "#" ? (
                           <a 
                             href={info.href}
-                            className="text-white hover:text-primary transition-colors font-medium"
+                            className="text-white hover:text-primary transition-colors font-medium text-lg"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-white font-medium">{info.value}</p>
+                          <p className="text-white font-medium text-lg">{info.value}</p>
                         )}
                       </div>
                     </motion.div>
@@ -170,6 +166,36 @@ export default function ContactPage() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Closing CTA Section */}
+      <section className="py-20 border-t border-white/10 bg-panel/20 relative z-10">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light tracking-tight text-gradient mb-8">
+              Ready to Scale with AI?
+            </h2>
+            <p className="text-xl leading-relaxed text-white/90 mb-10">
+              Join growing organizations building smarter, faster, and more resilient businesses with L3.
+            </p>
+            <Button 
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group px-8 py-4 text-lg"
+            >
+              <Link href="/contact">
+                Book a Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
     </div>

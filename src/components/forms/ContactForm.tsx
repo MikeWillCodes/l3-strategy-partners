@@ -45,12 +45,9 @@ const countries = [
 
 const topics = [
   "AI Strategy Consulting",
-  "Data Modernization",
-  "Model Operations",
-  "GenAI Platform",
-  "Safety & Alignment",
-  "Public Sector Solutions",
-  "Automotive AI",
+  "AI Readiness Score",
+  "Digital Modernization",
+  "Process Automation",
   "General Inquiry"
 ];
 
@@ -144,12 +141,12 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="firstName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">First Name</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">First Name</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="John" 
                       {...field} 
-                      className="bg-input border-white/10 text-text placeholder:text-muted"
+                      className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg"
                     />
                   </FormControl>
                   <FormMessage className="text-red-400" />
@@ -162,12 +159,12 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">Last Name</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">Last Name</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Doe" 
                       {...field} 
-                      className="bg-input border-white/10 text-text placeholder:text-muted"
+                      className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg"
                     />
                   </FormControl>
                   <FormMessage className="text-red-400" />
@@ -183,12 +180,12 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">Company</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">Company</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Acme Corp" 
                       {...field} 
-                      className="bg-input border-white/10 text-text placeholder:text-muted"
+                      className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg"
                     />
                   </FormControl>
                   <FormMessage className="text-red-400" />
@@ -201,12 +198,12 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">Title</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">Title</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Chief Technology Officer" 
                       {...field} 
-                      className="bg-input border-white/10 text-text placeholder:text-muted"
+                      className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg"
                     />
                   </FormControl>
                   <FormMessage className="text-red-400" />
@@ -222,13 +219,13 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">Work Email</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">Work Email</FormLabel>
                   <FormControl>
                     <Input 
                       type="email"
                       placeholder="john.doe@company.com" 
                       {...field} 
-                      className="bg-input border-white/10 text-text placeholder:text-muted"
+                      className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg"
                     />
                   </FormControl>
                   <FormMessage className="text-red-400" />
@@ -241,16 +238,16 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="country"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-text">Country</FormLabel>
+                  <FormLabel className="text-white text-lg font-medium">Country</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-input border-white/10 text-text">
+                      <SelectTrigger className="bg-input border-white/10 text-white text-lg py-3 rounded-lg">
                         <SelectValue placeholder="Select country" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="bg-popover border-white/10">
+                    <SelectContent className="bg-zinc-900 border-white/10 shadow-lg">
                       {countries.map((country) => (
-                        <SelectItem key={country} value={country} className="text-text">
+                        <SelectItem key={country} value={country} className="text-white hover:bg-white/10 focus:bg-white/10">
                           {country}
                         </SelectItem>
                       ))}
@@ -268,16 +265,16 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             name="topic"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-text">Topic</FormLabel>
+                <FormLabel className="text-white text-lg font-medium">Topic</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-input border-white/10 text-text">
+                    <SelectTrigger className="bg-input border-white/10 text-white text-lg py-3 rounded-lg">
                       <SelectValue placeholder="What can we help you with?" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="bg-popover border-white/10">
+                  <SelectContent className="bg-zinc-900 border-white/10 shadow-lg">
                     {topics.map((topic) => (
-                      <SelectItem key={topic} value={topic} className="text-text">
+                      <SelectItem key={topic} value={topic} className="text-white hover:bg-white/10 focus:bg-white/10">
                         {topic}
                       </SelectItem>
                     ))}
@@ -294,13 +291,13 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             name="details"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-text">Project Details</FormLabel>
+                <FormLabel className="text-white text-lg font-medium">Project Details</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="Tell us about your project, goals, and how we can help..."
                     rows={5}
                     {...field} 
-                    className="bg-input border-white/10 text-text placeholder:text-muted resize-none"
+                    className="bg-input border-white/10 text-white placeholder:text-white/60 text-lg py-3 rounded-lg resize-none"
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />
@@ -313,7 +310,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             type="submit" 
             size="lg"
             disabled={isSubmitting}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
             {isSubmitting ? (
               <>
