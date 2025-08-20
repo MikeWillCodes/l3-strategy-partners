@@ -154,6 +154,11 @@
     @apply text-2xl lg:text-4xl font-semibold tracking-tight;
   }
   
+  /* Radial gradient background */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--color) 0%, transparent 70%);
+  }
+  
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .animate-float,
