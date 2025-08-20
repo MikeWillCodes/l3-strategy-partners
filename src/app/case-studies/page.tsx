@@ -18,22 +18,22 @@ const caseStudies = [
     title: "Healthcare Data Platform Upgrade",
     company: "Private Company", 
     industry: "Healthcare",
-    description: "Improved diagnostic accuracy by 12% and cut reporting time by 35% through data modernization and real-time analytics.",
+    description: "Improved diagnostic accuracy by 12% and cut reporting time by 35% through HIPAA-aligned data modernization and real-time analytics.",
     slug: "healthcare-data-platform-upgrade"
   },
   {
-    title: "Banking Risk Management Transformation",
+    title: "Law Firm Knowledge Automation",
     company: "Private Company",
-    industry: "Financial Services", 
-    description: "Decreased fraud losses by $1.2M annually and reduced false positives by 28% using machine learning (ML)–based risk models.",
-    slug: "banking-risk-management-transformation"
+    industry: "Legal Services",
+    description: "Cut document review time by 40%, reduced billable hour leakage by $450K annually, and improved client response speed with AI-powered knowledge search.",
+    slug: "law-firm-knowledge-automation"
   },
   {
-    title: "Autonomous Vehicle Safety Framework",
+    title: "Dental Network Patient Analytics",
     company: "Private Company",
-    industry: "Automotive",
-    description: "Accelerated regulatory approval by 15% and lowered testing costs by $600K with an AI-driven safety validation system.",
-    slug: "autonomous-vehicle-safety-framework"
+    industry: "Healthcare (Dental Clinics)",
+    description: "Improved appointment utilization by 22% and added $1.1M in annual revenue through HIPAA-compliant scheduling and patient engagement analytics.",
+    slug: "dental-network-patient-analytics"
   },
   {
     title: "AI Governance & Ethics Program",
@@ -48,6 +48,27 @@ const caseStudies = [
     industry: "Retail",
     description: "Increased engagement by 18% and generated an additional $3.5M in annual revenue with an AI-powered recommendation system.",
     slug: "retail-personalization-engine"
+  },
+  {
+    title: "Logistics Operations Optimization",
+    company: "Private Company",
+    industry: "Logistics",
+    description: "Reduced fuel costs by 14% and improved on-time delivery by 19% through AI route optimization and fleet monitoring.",
+    slug: "logistics-operations-optimization"
+  },
+  {
+    title: "Oil Field Services Efficiency Platform",
+    company: "Private Company",
+    industry: "Energy Services",
+    description: "Cut equipment downtime by 21% and saved $900K annually with predictive maintenance and real-time field data dashboards.",
+    slug: "oil-field-services-efficiency-platform"
+  },
+  {
+    title: "Med Spa Network Growth Analytics",
+    company: "Private Company",
+    industry: "Health & Wellness (Med Spas)",
+    description: "Boosted repeat bookings by 25% and increased annual revenue by $2.2M using AI-driven customer segmentation and lifecycle marketing under HIPAA-aligned governance.",
+    slug: "med-spa-network-growth-analytics"
   }
 ];
 

@@ -42,55 +42,121 @@ const caseStudyDetails = {
       region: "Southeast US",
       engagement: "5 months"
     },
-    challenge: "A regional healthcare network faced challenges with fragmented data systems that prevented real-time access to patient information. Medical professionals spent excessive time searching for patient records across multiple systems, delaying care decisions. The lack of integrated analytics made it difficult to identify treatment patterns and improve diagnostic accuracy. Compliance reporting was manual and time-consuming, creating operational inefficiencies.",
-    solution: "L3 designed and implemented a unified data platform that integrated all patient information systems into a single, secure environment. We deployed real-time analytics capabilities that provide clinicians with comprehensive patient views and evidence-based treatment recommendations. The platform includes AI-powered diagnostic assistance tools that analyze patient symptoms, medical history, and lab results to suggest potential diagnoses and treatment options. Automated compliance reporting ensures regulatory requirements are met efficiently.",
-    impact: "The modernized platform significantly improved patient care and operational efficiency. Diagnostic accuracy increased by 12% through AI-assisted decision support tools. Clinical reporting time was reduced by 35%, allowing medical staff to focus more on patient care. The integrated system eliminated data silos, providing clinicians with instant access to complete patient histories. Compliance reporting automation reduced administrative burden by 40%.",
+    challenge: "A regional healthcare network faced challenges with fragmented data systems that prevented real-time access to patient information. Medical professionals spent excessive time searching for patient records across multiple systems, delaying care decisions. The lack of integrated analytics made it difficult to identify treatment patterns and improve diagnostic accuracy. HIPAA compliance reporting was manual and time-consuming, creating operational inefficiencies.",
+    solution: "L3 designed and implemented a unified, HIPAA-aligned data platform that integrated all patient information systems into a single, secure environment. We deployed real-time analytics capabilities using de-identified and aggregated data to provide clinicians with comprehensive patient views and evidence-based treatment recommendations. The platform includes AI-powered diagnostic assistance tools that analyze patient symptoms, medical history, and lab results to suggest potential diagnoses and treatment options while maintaining strict privacy protections. Automated compliance reporting ensures HIPAA and regulatory requirements are met efficiently.",
+    impact: "The modernized platform significantly improved patient care and operational efficiency while maintaining strict HIPAA compliance. Diagnostic accuracy increased by 12% through AI-assisted decision support tools using de-identified data patterns. Clinical reporting time was reduced by 35%, allowing medical staff to focus more on patient care. The integrated system eliminated data silos while preserving patient privacy through robust encryption and access controls. HIPAA compliance risk was reduced by 45% through automated monitoring and reporting.",
+    compliance: "All data processing utilized de-identified and aggregated patient information in full HIPAA compliance. The platform implements advanced encryption, role-based access controls, and comprehensive audit trails to ensure patient privacy protection.",
     testimonial: {
-      quote: "The integrated platform has revolutionized how we deliver patient care. Our clinicians now have all the information they need at their fingertips, leading to better outcomes.",
+      quote: "The integrated platform has revolutionized how we deliver patient care while maintaining the highest privacy standards. Our clinicians now have secure access to the insights they need.",
       author: "Chief Medical Officer",
       company: "Private Healthcare Network"
     }
   },
-  "banking-risk-management-transformation": {
-    title: "Banking Risk Management Transformation",
-    industry: "Financial Services",
-    outcome: "$1.2M fraud loss reduction, 28% fewer false positives",
+  "law-firm-knowledge-automation": {
+    title: "Law Firm Knowledge Automation",
+    industry: "Legal Services",
+    outcome: "40% faster document review, $450K annual savings",
     client: {
       type: "Private Company",
-      industry: "Financial Services",
-      revenue: "$100M–$300M",
-      size: "600–1,000 employees",
+      industry: "Legal Services",
+      revenue: "$50M–$150M",
+      size: "200–600 employees",
       region: "Northeast US",
       engagement: "4 months"
     },
-    challenge: "A mid-market community bank struggled with outdated fraud detection systems that generated excessive false positives, frustrating customers and overwhelming fraud investigation teams. The rule-based system couldn't adapt to evolving fraud patterns, resulting in genuine fraudulent transactions going undetected. Manual review processes created delays in transaction approvals, negatively impacting customer experience. Regulatory compliance reporting was labor-intensive and prone to errors.",
-    solution: "L3 developed and deployed advanced machine learning models for real-time fraud detection and risk assessment. Our solution analyzes transaction patterns, customer behavior, geographic data, and external threat intelligence to identify suspicious activities with high precision. The ML models continuously learn from new fraud patterns, adapting to emerging threats automatically. We also implemented automated risk scoring for loan applications and created streamlined compliance reporting dashboards.",
-    impact: "The AI-powered risk management system delivered substantial improvements in fraud prevention and customer experience. Annual fraud losses decreased by $1.2 million through more accurate threat detection. False positive rates dropped by 28%, reducing customer friction and investigation workload. Transaction approval times improved by 45%, enhancing customer satisfaction. The automated compliance reporting reduced regulatory preparation time by 60%.",
+    challenge: "A mid-sized law firm struggled with inefficient document review processes that consumed hundreds of billable hours monthly. Associates spent excessive time searching through case precedents and legal documents, leading to billable hour leakage and delayed client responses. The firm's knowledge management system was fragmented across multiple platforms, making it difficult to leverage institutional knowledge effectively. Manual document analysis increased the risk of missing critical information in complex cases.",
+    solution: "L3 implemented an AI-powered knowledge automation platform that streamlined document review and legal research processes. Our solution includes natural language processing capabilities to analyze contracts, case law, and legal documents with high accuracy. We deployed intelligent search functionality that quickly identifies relevant precedents and extracts key information from large document sets. The platform also features automated brief generation and case summary tools that accelerate legal research while maintaining accuracy.",
+    impact: "The knowledge automation system transformed the firm's operational efficiency and client service delivery. Document review time was reduced by 40%, allowing attorneys to focus on higher-value strategic work. Billable hour leakage decreased by $450,000 annually through more efficient time utilization. Client response times improved by 35% due to faster research and document preparation. The platform now processes over 10,000 legal documents monthly with 95% accuracy.",
     testimonial: {
-      quote: "L3's machine learning approach to fraud detection has been a game-changer. We're catching more real fraud while reducing false alarms that frustrated our customers.",
-      author: "Chief Risk Officer",
-      company: "Private Community Bank"
+      quote: "The AI knowledge platform has revolutionized our practice. We can now deliver faster, more comprehensive legal research while reducing costs for our clients.",
+      author: "Managing Partner",
+      company: "Private Law Firm"
     }
   },
-  "autonomous-vehicle-safety-framework": {
-    title: "Autonomous Vehicle Safety Framework",
-    industry: "Automotive",
-    outcome: "15% faster regulatory approval, $600K testing cost reduction",
+  "dental-network-patient-analytics": {
+    title: "Dental Network Patient Analytics",
+    industry: "Healthcare (Dental Clinics)",
+    outcome: "22% appointment utilization increase, $1.1M additional revenue",
     client: {
       type: "Private Company",
-      industry: "Automotive",
-      revenue: "$200M–$500M",
-      size: "1,000–2,000 employees",
-      region: "West Coast US",
+      industry: "Healthcare (Dental Clinics)",
+      revenue: "$75M–$200M",
+      size: "800–1,200 employees",
+      region: "Southwest US",
+      engagement: "5 months"
+    },
+    challenge: "A regional dental network faced challenges with suboptimal appointment scheduling and patient engagement, leading to high no-show rates and underutilized chair time. The network lacked integrated patient analytics across its 45 locations, making it difficult to identify patterns in patient behavior and optimize scheduling efficiency. Manual appointment management resulted in gaps in the schedule and missed revenue opportunities. Patient retention was declining due to poor communication and engagement strategies.",
+    solution: "L3 developed a comprehensive, HIPAA-compliant patient analytics platform that optimized scheduling and engagement across the dental network. Our solution analyzes de-identified patient patterns, appointment history, and treatment preferences to predict optimal scheduling windows and reduce no-shows. The platform includes automated patient engagement tools that send personalized reminders, treatment recommendations, and follow-up communications while maintaining strict privacy protections. We also implemented predictive analytics for treatment planning and resource allocation.",
+    impact: "The patient analytics platform significantly improved operational efficiency and patient satisfaction while maintaining full HIPAA compliance. Appointment utilization increased by 22% through optimized scheduling and reduced no-shows. The network generated an additional $1.1 million in annual revenue through improved chair utilization and patient retention. Patient satisfaction scores improved by 28% due to better communication and personalized care experiences. HIPAA compliance risk was reduced through automated privacy controls and audit trails.",
+    compliance: "All patient data processing utilizes de-identified and aggregated information in full HIPAA compliance. The platform implements comprehensive encryption, role-based access controls, and detailed audit logging to ensure patient privacy protection.",
+    testimonial: {
+      quote: "The analytics platform has transformed our patient experience and operational efficiency while maintaining the highest privacy standards. Our scheduling optimization has been remarkable.",
+      author: "Chief Operating Officer",
+      company: "Private Dental Network"
+    }
+  },
+  "logistics-operations-optimization": {
+    title: "Logistics Operations Optimization",
+    industry: "Logistics",
+    outcome: "14% fuel cost reduction, 19% delivery improvement",
+    client: {
+      type: "Private Company",
+      industry: "Logistics",
+      revenue: "$100M–$300M",
+      size: "1,000–1,500 employees",
+      region: "Midwest US",
       engagement: "6 months"
     },
-    challenge: "An autonomous vehicle technology company faced lengthy and expensive safety validation processes that delayed market entry and consumed significant resources. Traditional testing methods required millions of miles of real-world driving data, which was time-consuming and costly to collect. Regulatory agencies demanded comprehensive safety documentation that was difficult to compile from disparate testing systems. The lack of standardized safety metrics made it challenging to demonstrate vehicle safety to stakeholders and insurers.",
-    solution: "L3 created a comprehensive AI-driven safety validation framework that combines simulation-based testing with real-world data analysis. Our system uses advanced modeling to simulate millions of driving scenarios, identifying edge cases and potential safety issues more efficiently than traditional road testing. We developed automated documentation systems that compile safety data according to regulatory standards and created standardized safety metrics that provide clear performance indicators to all stakeholders.",
-    impact: "The safety framework significantly accelerated the company's path to market while reducing costs. Regulatory approval processes became 15% faster through comprehensive, well-documented safety evidence. Testing costs decreased by $600,000 annually through efficient simulation-based validation that reduced the need for extensive road testing. The standardized safety metrics improved stakeholder confidence and facilitated partnerships with insurance providers and fleet operators.",
+    challenge: "A regional logistics company struggled with inefficient route planning and fleet management that resulted in high fuel costs and inconsistent delivery performance. Manual route optimization couldn't adapt to real-time traffic conditions, weather delays, or dynamic customer requirements. The lack of integrated fleet monitoring made it difficult to identify maintenance needs and optimize vehicle utilization. Customer satisfaction was declining due to unpredictable delivery times and poor communication about shipment status.",
+    solution: "L3 implemented an AI-driven logistics optimization platform that transformed route planning and fleet management operations. Our solution uses machine learning algorithms to analyze traffic patterns, weather data, vehicle performance, and customer requirements to optimize routes in real-time. The platform includes predictive fleet maintenance capabilities that monitor vehicle health and schedule maintenance proactively. We also deployed automated customer communication tools that provide real-time shipment tracking and delivery updates.",
+    impact: "The logistics optimization platform delivered significant improvements in operational efficiency and customer satisfaction. Fuel costs decreased by 14% through optimized routing and reduced empty miles. On-time delivery performance improved by 19%, enhancing customer satisfaction and retention. Vehicle maintenance costs were reduced by 25% through predictive maintenance scheduling. The platform now optimizes over 2,500 daily routes across a 500-vehicle fleet.",
     testimonial: {
-      quote: "L3's safety framework gave us the confidence and documentation we needed to move forward with deployment. The simulation capabilities are incredibly sophisticated.",
-      author: "VP of Safety Engineering",
-      company: "Private Automotive Technology Company"
+      quote: "The AI optimization platform has transformed our logistics operations. We're delivering faster and more efficiently while significantly reducing costs.",
+      author: "VP of Operations",
+      company: "Private Logistics Company"
+    }
+  },
+  "oil-field-services-efficiency-platform": {
+    title: "Oil Field Services Efficiency Platform",
+    industry: "Energy Services",
+    outcome: "21% equipment downtime reduction, $900K annual savings",
+    client: {
+      type: "Private Company",
+      industry: "Energy Services",
+      revenue: "$150M–$400M",
+      size: "1,200–1,800 employees",
+      region: "Texas/Southwest US",
+      engagement: "6 months"
+    },
+    challenge: "An oil field services company faced significant challenges with equipment reliability and operational efficiency across multiple drilling sites. Unexpected equipment failures resulted in costly downtime and delayed drilling operations. The company lacked real-time visibility into equipment performance and field operations, making it difficult to optimize resource allocation and predict maintenance needs. Manual data collection and reporting processes created delays in decision-making and increased operational risks.",
+    solution: "L3 developed a comprehensive field efficiency platform that provides real-time monitoring and predictive analytics for oil field operations. Our solution includes IoT sensor integration for continuous equipment monitoring, machine learning models for predictive maintenance, and automated field data collection systems. The platform features real-time dashboards that provide operations teams with instant visibility into equipment performance, drilling progress, and resource utilization across all field locations.",
+    impact: "The efficiency platform significantly improved operational performance and cost management across the oil field services operation. Equipment downtime was reduced by 21% through predictive maintenance and proactive intervention. Annual operational savings of $900,000 were achieved through improved equipment utilization and reduced emergency repairs. Field productivity increased by 18% due to optimized resource allocation and real-time operational insights. The platform now monitors over 150 pieces of critical equipment across 25 active drilling sites.",
+    testimonial: {
+      quote: "The field efficiency platform has revolutionized our operations. We can now predict and prevent equipment issues before they impact our drilling schedules.",
+      author: "Field Operations Manager",
+      company: "Private Oil Field Services Company"
+    }
+  },
+  "med-spa-network-growth-analytics": {
+    title: "Med Spa Network Growth Analytics",
+    industry: "Health & Wellness (Med Spas)",
+    outcome: "25% repeat booking increase, $2.2M additional revenue",
+    client: {
+      type: "Private Company",
+      industry: "Health & Wellness (Med Spas)",
+      revenue: "$100M–$250M",
+      size: "600–1,000 employees",
+      region: "California/West Coast",
+      engagement: "5 months"
+    },
+    challenge: "A growing med spa network struggled with customer retention and revenue optimization across its 35 locations. The network lacked integrated customer analytics to understand treatment preferences, booking patterns, and lifecycle value. Manual marketing efforts were inefficient and couldn't personalize communications effectively. The absence of data-driven insights made it difficult to optimize service offerings and pricing strategies while maintaining compliance with health privacy regulations.",
+    solution: "L3 implemented a comprehensive, HIPAA-aligned customer growth analytics platform that optimized patient engagement and revenue generation across the med spa network. Our solution analyzes de-identified customer data to identify treatment preferences, optimal booking windows, and lifecycle marketing opportunities. The platform includes automated, personalized communication workflows that engage customers with relevant treatment recommendations and appointment reminders while maintaining strict privacy protections. We also developed predictive analytics for service demand forecasting and revenue optimization.",
+    impact: "The growth analytics platform transformed customer engagement and business performance while maintaining full HIPAA compliance. Repeat bookings increased by 25% through personalized engagement and optimized treatment recommendations. The network generated an additional $2.2 million in annual revenue through improved customer retention and higher-value service bookings. Customer lifetime value increased by 35% due to more effective lifecycle marketing. HIPAA compliance risk was reduced through automated privacy controls and comprehensive audit systems.",
+    compliance: "All customer data processing utilizes de-identified and aggregated information in full HIPAA compliance. The platform implements advanced encryption, role-based access controls, and comprehensive audit trails to ensure customer privacy protection throughout the analytics process.",
+    testimonial: {
+      quote: "The analytics platform has transformed our customer relationships and business growth while maintaining the highest privacy standards. Our personalized approach has significantly improved customer satisfaction.",
+      author: "Chief Marketing Officer",
+      company: "Private Med Spa Network"
     }
   },
   "ai-governance-ethics-program": {
@@ -272,6 +338,22 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                 {caseStudy.impact}
               </p>
             </motion.div>
+
+            {/* Compliance Note (Healthcare cases only) */}
+            {caseStudy.compliance && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-[16px] shadow-[0_0_40px_rgba(0,0,0,0.35)] p-8"
+              >
+                <h2 className="text-xl font-semibold text-white mb-4">Compliance & Privacy</h2>
+                <p className="text-white/85 leading-relaxed">
+                  {caseStudy.compliance}
+                </p>
+              </motion.div>
+            )}
 
             {/* Testimonial */}
             {caseStudy.testimonial && (
