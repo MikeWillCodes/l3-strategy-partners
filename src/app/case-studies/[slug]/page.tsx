@@ -42,10 +42,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "3 months"
     },
-    challenge: "A small specialty clinic struggled with inefficient patient scheduling that resulted in high no-show rates and underutilized appointment slots. Manual scheduling processes couldn't predict patient behavior patterns, leading to gaps in the schedule and lost revenue opportunities. The clinic lacked data-driven insights to optimize appointment types, timing, and patient engagement strategies while maintaining HIPAA compliance.",
-    solution: "L3 developed a HIPAA-compliant predictive analytics platform for scheduling optimization. Our solution analyzed de-identified patient patterns, appointment history, and treatment preferences to predict optimal scheduling windows and reduce no-shows. The platform included automated patient engagement tools that send personalized reminders and follow-up communications while maintaining strict privacy protections. We implemented predictive models for appointment demand forecasting and resource allocation.",
-    impact: "• Improved patient scheduling utilization by 18% through predictive analytics\n• Generated $900,000 in additional annual revenue from optimized appointment scheduling\n• Reduced patient no-show rates by 22% with targeted engagement\n• Increased patient satisfaction scores by 15% through better scheduling experiences\n• Enhanced operational efficiency with automated scheduling workflows",
-    compliance: "All patient data processing utilizes de-identified and aggregated information in full HIPAA compliance. The platform implements comprehensive encryption, role-based access controls, and detailed audit logging to ensure patient privacy protection throughout the analytics process.",
+    challenge: "A small specialty clinic struggled with inefficient patient scheduling that led to high no‑show rates and underutilized appointment slots. Manual processes could not anticipate demand or patient behavior patterns, creating gaps in the schedule and missed revenue. Leaders needed data‑driven insights to optimize appointment types, timing, and outreach—while maintaining strict Health Insurance Portability and Accountability Act (HIPAA) requirements and a seamless patient experience.",
+    solution: "L3 began with AI Strategy & Adoption to align stakeholders on goals and success metrics, then ran an AI Readiness Score to baseline data quality, access controls, and workflows. A focused Digital Modernization Blueprint (90 days) stood up the core capability stack.\n\nWhat we delivered:\n\n• Demand Forecasting (Tailored AI Solutions): Built machine learning (ML) models on de‑identified, aggregated data to predict optimal scheduling windows by service line and provider.\n\n• Process Automation: Implemented automated waitlist backfilling, reminder cadences, and follow‑up workflows to reduce no‑shows and keep the schedule full.\n\n• Patient Outreach (Customer Experience Optimization): Personalized reminder timing and channels based on historic engagement and preferences—without using identifiable protected health information (PHI).\n\n• Operational Dashboards: Role‑based views for front desk, clinic managers, and executives to track utilization, no‑show rates, and revenue capture in real time.\n\n• Adoption & Playbooks (AI Strategy & Adoption): Staff training, SOPs, and governance guidelines to ensure consistent usage and measurable improvement over time.",
+    impact: "• 18% increase in scheduling utilization driven by predictive analytics\n• $900K additional annual revenue captured from optimized appointment mix and backfilling\n• 22% reduction in no‑show rates through targeted reminders and automation\n• 15% improvement in patient satisfaction scores tied to smoother scheduling experiences\n• Higher operational efficiency from streamlined front‑office workflows",
+    compliance: "All analytics used de‑identified and aggregated data in full HIPAA alignment. The solution enforces encryption, role‑based access controls, and audit logging to ensure PHI remains protected throughout data processing and outreach workflows.",
     testimonial: {
       quote: "The scheduling optimization has transformed our clinic operations while maintaining the highest privacy standards.",
       author: "Clinic Administrator",
@@ -320,6 +320,18 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Leadership needed a modern, affordable solution that would reduce risk, improve safety, and scale across field locations without a full system overhaul.
                   </p>
                 </div>
+              ) : slug === 'specialty-clinic-scheduling-optimization' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A small specialty clinic struggled with inefficient patient scheduling that led to high no‑show rates and underutilized appointment slots.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual processes could not anticipate demand or patient behavior patterns, creating gaps in the schedule and missed revenue.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Leaders needed data‑driven insights to optimize appointment types, timing, and outreach—while maintaining strict Health Insurance Portability and Accountability Act (HIPAA) requirements and a seamless patient experience.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -361,6 +373,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'specialty-clinic-scheduling-optimization' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 began with AI Strategy & Adoption to align stakeholders on goals and success metrics, then ran an AI Readiness Score to baseline data quality, access controls, and workflows. A focused Digital Modernization Blueprint (90 days) stood up the core capability stack.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Demand Forecasting (Tailored AI Solutions):</strong> Built machine learning (ML) models on de‑identified, aggregated data to predict optimal scheduling windows by service line and provider.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Process Automation:</strong> Implemented automated waitlist backfilling, reminder cadences, and follow‑up workflows to reduce no‑shows and keep the schedule full.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Patient Outreach (Customer Experience Optimization):</strong> Personalized reminder timing and channels based on historic engagement and preferences—without using identifiable protected health information (PHI).
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Operational Dashboards:</strong> Role‑based views for front desk, clinic managers, and executives to track utilization, no‑show rates, and revenue capture in real time.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Adoption & Playbooks (AI Strategy & Adoption):</strong> Staff training, SOPs, and governance guidelines to ensure consistent usage and measurable improvement over time.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -383,6 +421,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">15% increase in field productivity via optimized maintenance scheduling</li>
                   <li className="leading-relaxed">25% improvement in safety metrics due to proactive monitoring and alerts</li>
                   <li className="leading-relaxed">Faster decisions with real‑time operational dashboards and clear KPI visibility</li>
+                </ul>
+              ) : slug === 'specialty-clinic-scheduling-optimization' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">18% increase in scheduling utilization driven by predictive analytics</li>
+                  <li className="leading-relaxed">$900K additional annual revenue captured from optimized appointment mix and backfilling</li>
+                  <li className="leading-relaxed">22% reduction in no‑show rates through targeted reminders and automation</li>
+                  <li className="leading-relaxed">15% improvement in patient satisfaction scores tied to smoother scheduling experiences</li>
+                  <li className="leading-relaxed">Higher operational efficiency from streamlined front‑office workflows</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -449,6 +495,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               <h2 className="text-section-hero mb-8">
                 {slug === 'oilfield-services-efficiency' 
                   ? 'Ready to improve uptime and reduce costs across your field operations?'
+                  : slug === 'specialty-clinic-scheduling-optimization'
+                  ? 'Ready to increase utilization and revenue without compromising privacy?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
