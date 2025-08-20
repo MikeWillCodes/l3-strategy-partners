@@ -8,67 +8,67 @@ import { ArrowRight } from "lucide-react";
 
 const caseStudies = [
   {
-    title: "Smart Manufacturing Modernization",
+    title: "Oilfield Services Efficiency",
     company: "Private Company",
-    industry: "Manufacturing",
-    description: "Reduced downtime by 18% and saved $850K annually with predictive AI maintenance and real-time quality inspections.",
-    slug: "smart-manufacturing-modernization"
+    industry: "Energy Services (Mid‑Market)",
+    description: "Reduced unplanned equipment downtime by 20% and saved $750K annually with predictive maintenance and real‑time field dashboards.",
+    slug: "oilfield-services-efficiency"
   },
   {
-    title: "Healthcare Data Platform Upgrade",
+    title: "Specialty Clinic Scheduling Optimization",
     company: "Private Company", 
-    industry: "Healthcare",
-    description: "Improved diagnostic accuracy by 12% and cut reporting time by 35% through HIPAA-aligned data modernization and real-time analytics.",
-    slug: "healthcare-data-platform-upgrade"
+    industry: "Healthcare (Specialty Clinic, SMB)",
+    description: "Improved patient scheduling utilization by 18% and increased annual revenue by $900K using HIPAA‑compliant predictive analytics.",
+    slug: "specialty-clinic-scheduling-optimization"
   },
   {
     title: "Law Firm Knowledge Automation",
     company: "Private Company",
-    industry: "Legal Services",
-    description: "Cut document review time by 40%, reduced billable hour leakage by $450K annually, and improved client response speed with AI-powered knowledge search.",
+    industry: "Legal Services (Mid‑Market)",
+    description: "Cut legal research time by 35%, recovered $400K annually in billable hours, and improved client response speed with AI‑powered document search.",
     slug: "law-firm-knowledge-automation"
   },
   {
-    title: "Dental Network Patient Analytics",
+    title: "Accounting Firm Workflow Automation",
     company: "Private Company",
-    industry: "Healthcare (Dental Clinics)",
-    description: "Improved appointment utilization by 22% and added $1.1M in annual revenue through HIPAA-compliant scheduling and patient engagement analytics.",
-    slug: "dental-network-patient-analytics"
+    industry: "Accounting (SMB)",
+    description: "Reduced month‑end close cycles by 28%, saved 1,200 staff hours annually, and improved audit readiness with automated reconciliations.",
+    slug: "accounting-firm-workflow-automation"
   },
   {
-    title: "AI Governance & Ethics Program",
+    title: "Construction Project Analytics",
     company: "Private Company",
-    industry: "Public Sector",
-    description: "Delivered responsible AI guidelines and governance playbooks, reducing compliance risk exposure by 22%.",
-    slug: "ai-governance-ethics-program"
+    industry: "Construction (Mid‑Market GC)",
+    description: "Lowered project overruns by 15% and saved $1.1M annually via predictive project analytics and subcontractor performance dashboards.",
+    slug: "construction-project-analytics"
   },
   {
-    title: "Retail Personalization Engine",
+    title: "Real Estate Portfolio Intelligence",
     company: "Private Company",
-    industry: "Retail",
-    description: "Increased engagement by 18% and generated an additional $3.5M in annual revenue with an AI-powered recommendation system.",
-    slug: "retail-personalization-engine"
+    industry: "Real Estate (Mid‑Market Developer)",
+    description: "Improved leasing efficiency by 22% and generated $2M in additional NOI through tenant behavior analytics and predictive lease modeling.",
+    slug: "real-estate-portfolio-intelligence"
   },
   {
-    title: "Logistics Operations Optimization",
+    title: "Logistics Route Optimization",
     company: "Private Company",
-    industry: "Logistics",
-    description: "Reduced fuel costs by 14% and improved on-time delivery by 19% through AI route optimization and fleet monitoring.",
-    slug: "logistics-operations-optimization"
+    industry: "Industrial Services (Logistics, SMB)",
+    description: "Cut fuel costs by 12% and improved on‑time deliveries by 20% using ML‑driven route optimization and fleet monitoring.",
+    slug: "logistics-route-optimization"
   },
   {
-    title: "Oil Field Services Efficiency Platform",
+    title: "Dental Network Patient Engagement",
     company: "Private Company",
-    industry: "Energy Services",
-    description: "Cut equipment downtime by 21% and saved $900K annually with predictive maintenance and real-time field data dashboards.",
-    slug: "oil-field-services-efficiency-platform"
+    industry: "Dental Clinics (SMB)",
+    description: "Reduced no‑show appointments by 17% and added $600K in annual revenue with HIPAA‑compliant patient engagement analytics.",
+    slug: "dental-network-patient-engagement"
   },
   {
-    title: "Med Spa Network Growth Analytics",
+    title: "Med Spa Growth Marketing Analytics",
     company: "Private Company",
-    industry: "Health & Wellness (Med Spas)",
-    description: "Boosted repeat bookings by 25% and increased annual revenue by $2.2M using AI-driven customer segmentation and lifecycle marketing under HIPAA-aligned governance.",
-    slug: "med-spa-network-growth-analytics"
+    industry: "Health & Wellness (Med Spas, SMB)",
+    description: "Boosted repeat visits by 23% and increased annual revenue by $1.2M using AI‑driven segmentation and lifecycle marketing under HIPAA‑aligned governance.",
+    slug: "med-spa-growth-marketing-analytics"
   }
 ];
 
@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
-              See how L3 helps small and mid-sized businesses modernize, scale, and compete with AI-powered solutions. 
+              See how L3 helps SMB and mid‑market organizations modernize, scale, and compete with AI‑powered solutions. 
               Each story highlights the challenge, the strategy, and the measurable results achieved.
             </motion.p>
           </div>
