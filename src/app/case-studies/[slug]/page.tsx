@@ -164,7 +164,7 @@ const caseStudyDetails = {
   "dental-network-patient-engagement": {
     title: "Dental Network Patient Engagement",
     industry: "Dental Clinics",
-    outcome: "17% no-show reduction, $600K additional revenue",
+    outcome: "17% no-show reduction, $600K annual revenue gain",
     client: {
       type: "Private Company",
       industry: "Dental Clinics",
@@ -173,10 +173,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "4 months"
     },
-    challenge: "A small dental clinic network struggled with high patient no-show rates and ineffective patient communication that resulted in lost revenue and operational inefficiencies. Manual appointment reminders and follow-up processes were time-consuming and inconsistent. The clinics lacked data-driven insights to understand patient behavior patterns and optimize engagement strategies while maintaining HIPAA compliance for all patient communications.",
-    solution: "L3 developed a HIPAA-compliant patient engagement analytics platform with automated communication workflows. Our solution analyzed de-identified patient patterns to predict no-show risk and optimize appointment reminders. The platform included automated SMS and email communication systems with personalized messaging while maintaining strict privacy protections. We implemented patient segmentation models and engagement optimization tools.",
-    impact: "• Reduced no-show appointments by 17% through targeted patient engagement\n• Added $600,000 in annual revenue from improved appointment utilization\n• Enhanced patient satisfaction scores by 20% with personalized communications\n• Improved operational efficiency with 90% automation of patient reminders\n• Increased appointment booking rates by 15% through optimized scheduling",
-    compliance: "All patient data processing utilizes de-identified and aggregated information in full HIPAA compliance. The platform implements comprehensive encryption, role-based access controls, and detailed audit logging to ensure patient privacy protection.",
+    challenge: "A regional dental clinic network faced high patient no-show rates and inefficient communication processes that drove revenue loss and operational challenges. Manual appointment reminders and follow-ups were inconsistent and time-intensive, leaving staff overburdened. The lack of data-driven insights prevented the clinics from understanding patient behavior, while HIPAA compliance requirements limited the ability to streamline communications. Leadership needed a secure, automated system to improve appointment utilization and patient satisfaction.",
+    solution: "L3 developed a HIPAA-compliant patient engagement analytics platform powered by AI and automation. After running an AI Readiness Score to assess data security and workflows, we implemented a targeted engagement solution tailored for the dental network.\n\nWhat we delivered:\n\n• Patient Engagement Analytics: De-identified patient data analyzed to predict no-show risk and optimize outreach.\n\n• Automated Communication Workflows: SMS and email reminders with personalized, data-driven messaging.\n\n• Segmentation Models: Tailored communication by patient demographics, visit history, and engagement patterns.\n\n• Workflow Automation: Automated 90% of appointment reminders and confirmations.\n\n• Governance & Security: HIPAA-compliant encryption, audit logging, and role-based access.",
+    impact: "• Reduced no-show appointments by 17% through targeted patient engagement\n• Added $600,000 in annual revenue from improved appointment utilization\n• Enhanced patient satisfaction scores by 20% with personalized communications\n• Improved operational efficiency with 90% automation of reminders\n• Increased appointment booking rates by 15% through optimized scheduling",
+    compliance: "All patient data processing utilized de-identified and aggregated data in full HIPAA compliance. The platform implemented encryption, role-based access controls, and audit logging to ensure patient privacy protections and regulatory alignment.",
     testimonial: {
       quote: "The patient engagement platform has significantly improved our appointment efficiency while maintaining the highest privacy standards.",
       author: "Practice Manager",
@@ -402,6 +402,21 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Breakdowns, inconsistent delivery times, and high costs eroded profitability and client satisfaction.
                   </p>
                 </div>
+              ) : slug === 'dental-network-patient-engagement' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A regional dental clinic network faced high patient no-show rates and inefficient communication processes that drove revenue loss and operational challenges.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual appointment reminders and follow-ups were inconsistent and time-intensive, leaving staff overburdened.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    The lack of data-driven insights prevented the clinics from understanding patient behavior, while HIPAA compliance requirements limited the ability to streamline communications.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Leadership needed a secure, automated system to improve appointment utilization and patient satisfaction.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -599,6 +614,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'dental-network-patient-engagement' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 developed a HIPAA-compliant patient engagement analytics platform powered by AI and automation. After running an AI Readiness Score to assess data security and workflows, we implemented a targeted engagement solution tailored for the dental network.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Patient Engagement Analytics:</strong> De-identified patient data analyzed to predict no-show risk and optimize outreach.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Automated Communication Workflows:</strong> SMS and email reminders with personalized, data-driven messaging.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Segmentation Models:</strong> Tailored communication by patient demographics, visit history, and engagement patterns.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Workflow Automation:</strong> Automated 90% of appointment reminders and confirmations.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Governance & Security:</strong> HIPAA-compliant encryption, audit logging, and role-based access.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -669,6 +710,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">Enhanced fleet utilization by 18% through optimized scheduling</li>
                   <li className="leading-relaxed">Reduced maintenance costs by 15% with predictive monitoring</li>
                   <li className="leading-relaxed">Increased customer satisfaction scores by 25% through reliable service</li>
+                </ul>
+              ) : slug === 'dental-network-patient-engagement' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">Reduced no-show appointments by 17% through targeted patient engagement</li>
+                  <li className="leading-relaxed">Added $600,000 in annual revenue from improved appointment utilization</li>
+                  <li className="leading-relaxed">Enhanced patient satisfaction scores by 20% with personalized communications</li>
+                  <li className="leading-relaxed">Improved operational efficiency with 90% automation of reminders</li>
+                  <li className="leading-relaxed">Increased appointment booking rates by 15% through optimized scheduling</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -747,6 +796,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to achieve similar results?'
                   : slug === 'logistics-route-optimization'
                   ? 'Ready to optimize routes and cut logistics costs?'
+                  : slug === 'dental-network-patient-engagement'
+                  ? 'Ready to reduce no-shows and unlock new revenue with AI-powered engagement?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
