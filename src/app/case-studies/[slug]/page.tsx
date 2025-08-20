@@ -55,20 +55,21 @@ const caseStudyDetails = {
   "law-firm-knowledge-automation": {
     title: "Law Firm Knowledge Automation",
     industry: "Legal Services",
-    outcome: "35% faster legal research, $400K annual recovery",
+    outcome: "35% faster legal research, $2.5M annual savings",
     client: {
       type: "Private Company",
       industry: "Legal Services",
-      revenue: "$50M–$100M",
-      size: "150–600 employees",
+      revenue: "$30M–$75M",
+      size: "100–300 employees",
       region: "Houston / North America",
       engagement: "5 months"
     },
-    challenge: "A mid-market law firm struggled with inefficient legal research processes that consumed excessive billable hours and delayed client responses. Associates spent significant time searching through case precedents and legal documents manually, leading to billable hour leakage and reduced profitability. The firm's knowledge management system was fragmented, making it difficult to leverage institutional knowledge effectively and maintain competitive response times.",
-    solution: "L3 implemented an AI-powered document search and knowledge automation platform. Our solution included natural language processing for legal document analysis, intelligent search functionality for case precedents, and automated brief generation tools. We developed custom workflows for document review, case law research, and client communication templates. The platform integrated with existing legal databases to provide comprehensive search capabilities across all firm resources.",
-    impact: "• Cut legal research time by 35% through AI-powered document search\n• Recovered $400,000 annually in billable hours through improved efficiency\n• Improved client response speed by 28% with automated research tools\n• Enhanced document accuracy with 95% precision in legal precedent matching\n• Increased attorney productivity by 22% through streamlined workflows",
+    challenge: "A Houston-based mid-sized law firm faced escalating inefficiencies in managing precedent libraries, contracts, and case knowledge. Attorneys and paralegals spent excessive time searching through fragmented databases and shared drives. This created long turnaround times, inconsistent use of precedents, and rising client dissatisfaction. Leadership sought a modern, secure system that could reduce research time, preserve institutional knowledge, and support compliance with legal and client confidentiality obligations.",
+    solution: "L3 applied its AI Strategy & Adoption framework to identify bottlenecks in legal research and document management. After running an AI Readiness Score to baseline data structure and governance, we implemented a focused Digital Modernization Blueprint (90 days) to stand up the core AI capability stack.\n\nWhat we delivered:\n\n• Knowledge Automation (Tailored AI Solutions): Built an AI-powered knowledge assistant that indexed case law, contracts, and firm work product into a secure, searchable repository.\n\n• Natural Language Search (Customer Experience Optimization—internal): Attorneys can now query in plain English and retrieve relevant precedents instantly.\n\n• Process Automation: Automated version control, document tagging, and knowledge updates to reduce manual admin work.\n\n• Decision Dashboards: Partner-level dashboards with visibility into active matters, research hours saved, and precedent usage.\n\n• Governance Playbooks: Policies, access rights, and audit trails to ensure client confidentiality and ethical compliance.",
+    impact: "• 35% reduction in average legal research time across practice groups\n• $2.5M annual savings in billable hours reallocated from manual research to client-facing work\n• 40% faster onboarding of new associates through easier access to firm knowledge\n• Higher client satisfaction scores from faster turnaround on deliverables\n• Stronger compliance with client confidentiality via role-based access controls and audit logging",
+    compliance: "The solution was designed to meet legal confidentiality and professional responsibility standards. All documents were encrypted at rest and in transit, with fine-grained access controls. Audit trails ensured traceability of precedent use, aligning with both firm policy and client requirements.",
     testimonial: {
-      quote: "The AI knowledge platform has revolutionized our legal research capabilities and significantly improved our client service delivery.",
+      quote: "The knowledge automation platform has transformed how our attorneys work. We spend less time digging through files and more time advising clients.",
       author: "Managing Partner",
       company: "Private Law Firm"
     }
@@ -332,6 +333,18 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Leaders needed data‑driven insights to optimize appointment types, timing, and outreach—while maintaining strict Health Insurance Portability and Accountability Act (HIPAA) requirements and a seamless patient experience.
                   </p>
                 </div>
+              ) : slug === 'law-firm-knowledge-automation' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A Houston-based mid-sized law firm faced escalating inefficiencies in managing precedent libraries, contracts, and case knowledge.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Attorneys and paralegals spent excessive time searching through fragmented databases and shared drives. This created long turnaround times, inconsistent use of precedents, and rising client dissatisfaction.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Leadership sought a modern, secure system that could reduce research time, preserve institutional knowledge, and support compliance with legal and client confidentiality obligations.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -399,6 +412,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'law-firm-knowledge-automation' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 applied its AI Strategy & Adoption framework to identify bottlenecks in legal research and document management. After running an AI Readiness Score to baseline data structure and governance, we implemented a focused Digital Modernization Blueprint (90 days) to stand up the core AI capability stack.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Knowledge Automation (Tailored AI Solutions):</strong> Built an AI-powered knowledge assistant that indexed case law, contracts, and firm work product into a secure, searchable repository.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Natural Language Search (Customer Experience Optimization—internal):</strong> Attorneys can now query in plain English and retrieve relevant precedents instantly.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Process Automation:</strong> Automated version control, document tagging, and knowledge updates to reduce manual admin work.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Decision Dashboards:</strong> Partner-level dashboards with visibility into active matters, research hours saved, and precedent usage.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Governance Playbooks:</strong> Policies, access rights, and audit trails to ensure client confidentiality and ethical compliance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -429,6 +468,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">22% reduction in no‑show rates through targeted reminders and automation</li>
                   <li className="leading-relaxed">15% improvement in patient satisfaction scores tied to smoother scheduling experiences</li>
                   <li className="leading-relaxed">Higher operational efficiency from streamlined front‑office workflows</li>
+                </ul>
+              ) : slug === 'law-firm-knowledge-automation' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">35% reduction in average legal research time across practice groups</li>
+                  <li className="leading-relaxed">$2.5M annual savings in billable hours reallocated from manual research to client-facing work</li>
+                  <li className="leading-relaxed">40% faster onboarding of new associates through easier access to firm knowledge</li>
+                  <li className="leading-relaxed">Higher client satisfaction scores from faster turnaround on deliverables</li>
+                  <li className="leading-relaxed">Stronger compliance with client confidentiality via role-based access controls and audit logging</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -497,6 +544,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to improve uptime and reduce costs across your field operations?'
                   : slug === 'specialty-clinic-scheduling-optimization'
                   ? 'Ready to increase utilization and revenue without compromising privacy?'
+                  : slug === 'law-firm-knowledge-automation'
+                  ? 'Ready to modernize your firm\'s knowledge and cut research time?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
