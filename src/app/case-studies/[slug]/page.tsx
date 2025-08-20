@@ -86,9 +86,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "3 months"
     },
-    challenge: "A small accounting firm faced significant challenges with manual month-end close processes that required extensive overtime and delayed client reporting. Manual reconciliations were time-consuming and error-prone, creating audit readiness issues and staff burnout. The firm lacked automated workflows for routine accounting tasks, resulting in inefficient resource allocation and reduced client capacity.",
-    solution: "L3 developed an automated workflow platform for month-end close processes and reconciliations. Our solution included automated journal entry processing, bank reconciliation workflows, and exception reporting systems. We implemented machine learning models for transaction categorization and anomaly detection. The platform featured automated audit trail generation and compliance reporting to improve audit readiness and regulatory compliance.",
-    impact: "• Reduced month-end close cycles by 28% through automated reconciliations\n• Saved 1,200 staff hours annually with workflow automation\n• Improved audit readiness with 95% accuracy in automated processes\n• Enhanced client capacity by 20% through operational efficiency gains\n• Reduced overtime costs by 35% during peak accounting periods",
+    challenge: "A small accounting firm struggled with manual, error-prone month-end close processes that consumed extensive overtime and delayed reporting. Staff spent hours reconciling transactions, processing journal entries, and preparing reports — increasing burnout while limiting client capacity. Leadership needed a way to streamline operations, reduce manual workloads, and ensure compliance with audit and regulatory standards.",
+    solution: "L3 applied its AI Strategy & Adoption framework to baseline data quality and workflows. Using the AI Readiness Score, we identified automation opportunities in reconciliation, journal entries, and exception reporting. We then delivered a Digital Modernization Blueprint (90 days) to establish automation workflows and compliance guardrails.\n\nWhat we delivered:\n\n• Automated Journal Processing: Streamlined journal entry creation and posting with AI-assisted validation.\n\n• Bank Reconciliation Automation: Automated matching and reconciliation of transactions, reducing manual review time.\n\n• Exception Reporting Systems: AI models flagged anomalies and transaction errors in real time.\n\n• Audit Trail Automation: Auto-generated audit logs and compliance reports for regulatory readiness.\n\n• Anomaly Detection Models: Machine learning models categorized transactions and highlighted risks proactively.",
+    impact: "• 28% reduction in month-end close cycle time through workflow automation\n• 1,200 hours of staff time saved annually, reallocated to client-facing work\n• 95% accuracy in reconciliations, improving audit readiness\n• 20% increase in client capacity through efficiency gains\n• 35% reduction in overtime costs during peak periods",
+    compliance: "The workflow platform included automated audit logs, encryption at rest and in transit, and compliance reporting to meet accounting and regulatory requirements. Fine-grained access controls safeguarded sensitive financial data, while automated audit trails ensured readiness for both internal and external reviews.",
     testimonial: {
       quote: "The workflow automation has transformed our month-end processes and allowed us to serve more clients with the same team.",
       author: "Managing Partner",
@@ -345,6 +346,18 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Leadership sought a modern, secure system that could reduce research time, preserve institutional knowledge, and support compliance with legal and client confidentiality obligations.
                   </p>
                 </div>
+              ) : slug === 'accounting-firm-workflow-automation' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A small accounting firm struggled with manual, error-prone month-end close processes that consumed extensive overtime and delayed reporting.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Staff spent hours reconciling transactions, processing journal entries, and preparing reports — increasing burnout while limiting client capacity.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Leadership needed a way to streamline operations, reduce manual workloads, and ensure compliance with audit and regulatory standards.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -438,6 +451,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'accounting-firm-workflow-automation' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 applied its AI Strategy & Adoption framework to baseline data quality and workflows. Using the AI Readiness Score, we identified automation opportunities in reconciliation, journal entries, and exception reporting. We then delivered a Digital Modernization Blueprint (90 days) to establish automation workflows and compliance guardrails.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Automated Journal Processing:</strong> Streamlined journal entry creation and posting with AI-assisted validation.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Bank Reconciliation Automation:</strong> Automated matching and reconciliation of transactions, reducing manual review time.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Exception Reporting Systems:</strong> AI models flagged anomalies and transaction errors in real time.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Audit Trail Automation:</strong> Auto-generated audit logs and compliance reports for regulatory readiness.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Anomaly Detection Models:</strong> Machine learning models categorized transactions and highlighted risks proactively.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -476,6 +515,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">40% faster onboarding of new associates through easier access to firm knowledge</li>
                   <li className="leading-relaxed">Higher client satisfaction scores from faster turnaround on deliverables</li>
                   <li className="leading-relaxed">Stronger compliance with client confidentiality via role-based access controls and audit logging</li>
+                </ul>
+              ) : slug === 'accounting-firm-workflow-automation' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">28% reduction in month-end close cycle time through workflow automation</li>
+                  <li className="leading-relaxed">1,200 hours of staff time saved annually, reallocated to client-facing work</li>
+                  <li className="leading-relaxed">95% accuracy in reconciliations, improving audit readiness</li>
+                  <li className="leading-relaxed">20% increase in client capacity through efficiency gains</li>
+                  <li className="leading-relaxed">35% reduction in overtime costs during peak periods</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -546,6 +593,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to increase utilization and revenue without compromising privacy?'
                   : slug === 'law-firm-knowledge-automation'
                   ? 'Ready to modernize your firm\'s knowledge and cut research time?'
+                  : slug === 'accounting-firm-workflow-automation'
+                  ? 'Ready to modernize your accounting workflows and save hundreds of hours?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
