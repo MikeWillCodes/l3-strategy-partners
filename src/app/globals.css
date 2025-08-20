@@ -124,7 +124,7 @@
   }
   
   .text-section-hero-gradient {
-    @apply text-3xl lg:text-4xl font-light tracking-tight;
+    @apply text-5xl lg:text-6xl font-light tracking-tight;
     background: var(--iris);
     background-clip: text;
     -webkit-background-clip: text;
