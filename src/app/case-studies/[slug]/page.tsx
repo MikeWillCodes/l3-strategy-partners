@@ -151,9 +151,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "3 months"
     },
-    challenge: "A small logistics company faced significant challenges with manual route planning that resulted in high fuel costs and inconsistent delivery performance. The lack of real-time optimization tools made it difficult to adapt to traffic conditions, customer changes, or operational constraints. Manual fleet monitoring couldn't provide insights into vehicle performance or maintenance needs, leading to unexpected breakdowns and service disruptions.",
-    solution: "L3 implemented an ML-driven route optimization and fleet monitoring platform. Our solution included real-time route planning algorithms, GPS tracking integration, and automated dispatch systems. We developed machine learning models to predict optimal routes based on traffic patterns, delivery windows, and vehicle capabilities. The platform featured fleet monitoring dashboards and predictive maintenance alerts to improve operational reliability.",
-    impact: "• Cut fuel costs by 12% through ML-driven route optimization\n• Improved on-time deliveries by 20% with real-time route adjustments\n• Enhanced fleet utilization by 18% through optimized scheduling\n• Reduced maintenance costs by 15% with predictive monitoring\n• Increased customer satisfaction scores by 25% through reliable service",
+    challenge: "A small Houston-based logistics company faced mounting challenges in fuel costs and delivery performance. Manual route planning was reactive and inefficient, making it difficult to adapt to traffic changes, customer requests, and vehicle constraints. Fleet monitoring was largely manual, providing little visibility into performance or maintenance needs. Breakdowns, inconsistent delivery times, and high costs eroded profitability and client satisfaction.",
+    solution: "L3 implemented an ML-driven route optimization and fleet monitoring platform to modernize operations. After establishing an AI Readiness Score, we rolled out a Digital Modernization Blueprint in 90 days, deploying AI-powered scheduling and monitoring.\n\nWhat we delivered:\n\n• ML-driven Route Optimization: Predicted optimal routes using traffic patterns, delivery windows, and vehicle constraints.\n\n• Real-time Fleet Monitoring: GPS tracking, dispatch automation, and predictive maintenance alerts.\n\n• Scheduling Optimization: Enhanced fleet utilization and reduced idle time through AI-powered scheduling.\n\n• Decision Dashboards: Live insights into delivery KPIs, fuel usage, and vehicle health.\n\n• Governance Playbooks: Policies for data security, driver monitoring, and compliance with DOT standards.",
+    impact: "• Cut fuel costs by 12% through ML-driven route optimization\n• Improved on-time deliveries by 20% with real-time adjustments\n• Enhanced fleet utilization by 18% through optimized scheduling\n• Reduced maintenance costs by 15% with predictive monitoring\n• Increased customer satisfaction scores by 25% through reliable service",
+    compliance: "The platform was built with compliance in mind, aligning with Department of Transportation (DOT) safety and monitoring requirements. Fleet and route data were encrypted, access was role-based, and audit trails ensured accountability for both dispatchers and drivers.",
     testimonial: {
       quote: "The route optimization platform has transformed our delivery operations and significantly improved our cost efficiency.",
       author: "Operations Manager",
@@ -386,6 +387,21 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Without data-driven insights, the company missed opportunities to maximize net operating income (NOI) and improve portfolio performance.
                   </p>
                 </div>
+              ) : slug === 'logistics-route-optimization' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A small Houston-based logistics company faced mounting challenges in fuel costs and delivery performance.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual route planning was reactive and inefficient, making it difficult to adapt to traffic changes, customer requests, and vehicle constraints.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Fleet monitoring was largely manual, providing little visibility into performance or maintenance needs.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Breakdowns, inconsistent delivery times, and high costs eroded profitability and client satisfaction.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -557,6 +573,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'logistics-route-optimization' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 implemented an ML-driven route optimization and fleet monitoring platform to modernize operations. After establishing an AI Readiness Score, we rolled out a Digital Modernization Blueprint in 90 days, deploying AI-powered scheduling and monitoring.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>ML-driven Route Optimization:</strong> Predicted optimal routes using traffic patterns, delivery windows, and vehicle constraints.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Real-time Fleet Monitoring:</strong> GPS tracking, dispatch automation, and predictive maintenance alerts.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Scheduling Optimization:</strong> Enhanced fleet utilization and reduced idle time through AI-powered scheduling.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Decision Dashboards:</strong> Live insights into delivery KPIs, fuel usage, and vehicle health.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Governance Playbooks:</strong> Policies for data security, driver monitoring, and compliance with DOT standards.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -619,6 +661,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">Enhanced market positioning with 95% accuracy in demand prediction</li>
                   <li className="leading-relaxed">Reduced vacancy periods by 18% with predictive leasing strategies</li>
                   <li className="leading-relaxed">Increased portfolio ROI by 15% through data-driven decision making</li>
+                </ul>
+              ) : slug === 'logistics-route-optimization' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">Cut fuel costs by 12% through ML-driven route optimization</li>
+                  <li className="leading-relaxed">Improved on-time deliveries by 20% with real-time adjustments</li>
+                  <li className="leading-relaxed">Enhanced fleet utilization by 18% through optimized scheduling</li>
+                  <li className="leading-relaxed">Reduced maintenance costs by 15% with predictive monitoring</li>
+                  <li className="leading-relaxed">Increased customer satisfaction scores by 25% through reliable service</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -695,6 +745,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to cut overruns and increase profitability?'
                   : slug === 'real-estate-portfolio-intelligence'
                   ? 'Ready to achieve similar results?'
+                  : slug === 'logistics-route-optimization'
+                  ? 'Ready to optimize routes and cut logistics costs?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
