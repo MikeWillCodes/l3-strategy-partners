@@ -21,11 +21,11 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "4 months"
     },
-    challenge: "A mid-market oilfield services company faced significant challenges with unplanned equipment failures across multiple drilling sites, resulting in costly downtime and delayed operations. Manual monitoring processes couldn't predict equipment failures, leading to emergency repairs and lost revenue. The lack of real-time visibility into field operations made it difficult to optimize resource allocation and maintain equipment performance standards.",
-    solution: "L3 implemented a comprehensive predictive maintenance platform with real-time field dashboards. Our solution included IoT sensor deployment across critical drilling equipment, machine learning (ML) models for failure prediction, and automated alert systems for maintenance teams. We developed custom dashboards providing real-time visibility into equipment performance, drilling progress, and maintenance schedules across all field locations.",
-    impact: "• Reduced unplanned equipment downtime by 20% through predictive maintenance\n• Achieved $750,000 in annual cost savings from improved equipment utilization\n• Increased field productivity by 15% through optimized maintenance scheduling\n• Improved safety metrics by 25% with proactive equipment monitoring\n• Enhanced decision-making with real-time operational dashboards",
+    challenge: "A mid‑market oilfield services company faced escalating challenges with unplanned equipment failures across multiple drilling sites. Manual monitoring created blind spots that led to costly downtime, delayed schedules, and emergency repairs. Leadership needed a modern, affordable solution that would reduce risk, improve safety, and scale across field locations without a full system overhaul.",
+    solution: "L3 applied our AI Strategy & Adoption framework to pinpoint the highest‑value use cases and secure stakeholder buy‑in. We ran an AI Readiness Score assessment to baseline data quality, infrastructure, and skills, then executed a focused Digital Modernization Blueprint (90 days) to stand up the core capability stack.\n\nWhat we delivered:\n\n• Data + Telemetry (Internet of Things): Deployed sensors on critical drilling equipment and built secure data pipelines for real‑time telemetry.\n\n• Predictive Maintenance (Tailored AI Solutions): Trained machine learning (ML) models tuned to the client's operating conditions to forecast failures and surface early warnings.\n\n• Process Automation: Implemented automated alerts, work order creation, and maintenance scheduling to reduce response lag and manual checks.\n\n• Decision Dashboards (Customer Experience Optimization—internal): Role‑based views for field supervisors, maintenance planners, and executives to track key performance indicators (KPIs), risk, and asset health.\n\n• Adoption & Governance (AI Strategy & Adoption): Playbooks, change‑management workshops, and runbooks to ensure sustained usage and measurable return on investment (ROI).",
+    impact: "• 20% reduction in unplanned equipment downtime through predictive maintenance\n• $750K annual savings from improved equipment utilization and fewer emergency repairs\n• 15% increase in field productivity via optimized maintenance scheduling\n• 25% improvement in safety metrics due to proactive monitoring and alerts\n• Faster decisions with real‑time operational dashboards and clear KPI visibility",
     testimonial: {
-      quote: "The predictive maintenance system has transformed our field operations. We now prevent equipment failures before they impact our drilling schedules.",
+      quote: "The predictive maintenance system has transformed our field operations. We can now prevent equipment failures before they impact our drilling schedules.",
       author: "Field Operations Manager",
       company: "Private Energy Services Company"
     }
@@ -222,7 +222,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
       {/* Hero Banner */}
       <section className="py-16 lg:py-24">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {/* Back Navigation */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -252,7 +252,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-2xl font-light text-primary mb-12"
+              className="text-2xl font-light text-gradient mb-12"
             >
               {caseStudy.outcome}
             </motion.p>
@@ -265,7 +265,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-[16px] shadow-[0_0_40px_rgba(0,0,0,0.35)] p-8"
             >
               <h2 className="text-xl font-semibold text-white mb-6">Client Snapshot</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <p className="text-sm text-white/60 mb-1">Client</p>
                   <p className="text-white font-medium">{caseStudy.client.type}</p>
@@ -299,7 +299,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
       {/* Content Sections */}
       <section className="py-16">
         <div className="container">
-          <div className="max-w-4xl mx-auto space-y-16">
+          <div className="max-w-3xl mx-auto space-y-16">
             {/* Business Challenge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -307,10 +307,24 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-section-hero mb-6">Business Challenge</h2>
-              <p className="text-lg text-white/85 leading-relaxed">
-                {caseStudy.challenge}
-              </p>
+              <h2 className="text-section-hero mb-8">Business Challenge</h2>
+              {slug === 'oilfield-services-efficiency' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A mid‑market oilfield services company faced escalating challenges with unplanned equipment failures across multiple drilling sites.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual monitoring created blind spots that led to costly downtime, delayed schedules, and emergency repairs.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Leadership needed a modern, affordable solution that would reduce risk, improve safety, and scale across field locations without a full system overhaul.
+                  </p>
+                </div>
+              ) : (
+                <p className="text-lg text-white/85 leading-relaxed">
+                  {caseStudy.challenge}
+                </p>
+              )}
             </motion.div>
 
             {/* L3 Solution */}
@@ -320,10 +334,38 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-section-hero mb-6">L3 Solution</h2>
-              <p className="text-lg text-white/85 leading-relaxed">
-                {caseStudy.solution}
-              </p>
+              <h2 className="text-section-hero mb-8">L3 Solution</h2>
+              {slug === 'oilfield-services-efficiency' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 applied our AI Strategy & Adoption framework to pinpoint the highest‑value use cases and secure stakeholder buy‑in. We ran an AI Readiness Score assessment to baseline data quality, infrastructure, and skills, then executed a focused Digital Modernization Blueprint (90 days) to stand up the core capability stack.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Data + Telemetry (Internet of Things, IoT):</strong> Deployed sensors on critical drilling equipment and built secure data pipelines for real‑time telemetry.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Predictive Maintenance (Tailored AI Solutions):</strong> Trained machine learning (ML) models tuned to the client's operating conditions to forecast failures and surface early warnings.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Process Automation:</strong> Implemented automated alerts, work order creation, and maintenance scheduling to reduce response lag and manual checks.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Decision Dashboards (Customer Experience Optimization—internal):</strong> Role‑based views for field supervisors, maintenance planners, and executives to track key performance indicators (KPIs), risk, and asset health.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Adoption & Governance (AI Strategy & Adoption):</strong> Playbooks, change‑management workshops, and runbooks to ensure sustained usage and measurable return on investment (ROI).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-lg text-white/85 leading-relaxed">
+                  {caseStudy.solution}
+                </p>
+              )}
             </motion.div>
 
             {/* Business Impact */}
@@ -333,14 +375,24 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-section-hero mb-6">Business Impact</h2>
-              <div className="text-lg text-white/85 leading-relaxed">
-                {caseStudy.impact.split('\n').map((bullet, index) => (
-                  <p key={index} className="mb-3">
-                    {bullet}
-                  </p>
-                ))}
-              </div>
+              <h2 className="text-section-hero mb-8">Business Impact</h2>
+              {slug === 'oilfield-services-efficiency' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">20% reduction in unplanned equipment downtime through predictive maintenance</li>
+                  <li className="leading-relaxed">$750K annual savings from improved equipment utilization and fewer emergency repairs</li>
+                  <li className="leading-relaxed">15% increase in field productivity via optimized maintenance scheduling</li>
+                  <li className="leading-relaxed">25% improvement in safety metrics due to proactive monitoring and alerts</li>
+                  <li className="leading-relaxed">Faster decisions with real‑time operational dashboards and clear KPI visibility</li>
+                </ul>
+              ) : (
+                <div className="text-lg text-white/85 leading-relaxed">
+                  {caseStudy.impact.split('\n').map((bullet, index) => (
+                    <p key={index} className="mb-3">
+                      {bullet}
+                    </p>
+                  ))}
+                </div>
+              )}
             </motion.div>
 
             {/* Compliance Note (Healthcare cases only) */}
@@ -366,14 +418,16 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-[16px] shadow-[0_0_40px_rgba(0,0,0,0.35)] p-8"
               >
-                <blockquote className="text-xl font-light text-white/90 mb-6 italic">
-                  &ldquo;{caseStudy.testimonial.quote}&rdquo;
-                </blockquote>
-                <div>
-                  <p className="text-primary font-medium">{caseStudy.testimonial.author}</p>
-                  <p className="text-white/60 text-sm">{caseStudy.testimonial.company}</p>
+                <h3 className="text-xl font-semibold text-white mb-6">Client Testimonial</h3>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-[16px] shadow-[0_0_40px_rgba(0,0,0,0.35)] p-8">
+                  <blockquote className="text-xl font-light text-white/90 mb-6 italic">
+                    &ldquo;{caseStudy.testimonial.quote}&rdquo;
+                  </blockquote>
+                  <cite className="not-italic">
+                    <p className="text-primary font-medium">&mdash; {caseStudy.testimonial.author}</p>
+                    <p className="text-white/60 text-sm">{caseStudy.testimonial.company}</p>
+                  </cite>
                 </div>
               </motion.div>
             )}
@@ -384,27 +438,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
       {/* CTA Section */}
       <section className="py-20 border-t border-white/10 bg-panel/20">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-section-hero mb-8">
-              Ready to achieve similar results?
-            </h2>
-            <Button 
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
             >
-              <Link href="/contact">
-                Book a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
+              <h2 className="text-section-hero mb-8">
+                {slug === 'oilfield-services-efficiency' 
+                  ? 'Ready to improve uptime and reduce costs across your field operations?'
+                  : 'Ready to achieve similar results?'
+                }
+              </h2>
+              <Button 
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <Link href="/contact">
+                  Book a Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
