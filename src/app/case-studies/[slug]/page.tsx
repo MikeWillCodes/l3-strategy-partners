@@ -108,9 +108,10 @@ const caseStudyDetails = {
       region: "Houston / North America",
       engagement: "6 months"
     },
-    challenge: "A mid-market general contractor struggled with project cost overruns and schedule delays that impacted profitability and client relationships. Manual project tracking couldn't provide real-time visibility into subcontractor performance, material costs, and project progress. The lack of predictive analytics made it difficult to identify potential issues early and implement corrective actions before they became costly problems.",
-    solution: "L3 implemented a comprehensive project analytics platform with predictive modeling capabilities. Our solution included real-time project tracking dashboards, subcontractor performance analytics, and cost prediction models. We developed automated reporting systems for project managers and implemented machine learning algorithms to predict potential delays and cost overruns. The platform integrated with existing project management tools and financial systems.",
-    impact: "• Lowered project overruns by 15% through predictive project analytics\n• Saved $1.1M annually via improved project cost management\n• Improved project delivery timelines by 20% with real-time tracking\n• Enhanced subcontractor performance monitoring with 90% accuracy\n• Increased project profitability by 18% through better resource allocation",
+    challenge: "A mid-market general contractor struggled with project cost overruns and schedule delays that impacted profitability and client relationships. Manual project tracking lacked real-time visibility into subcontractor performance, material costs, and progress across jobsites. Without predictive analytics, the firm was unable to identify risks early or implement corrective action, leading to missed deadlines, strained client trust, and rising operational costs.",
+    solution: "L3 delivered a comprehensive project analytics platform with predictive modeling and real-time reporting. After running an AI Readiness Score and Digital Modernization Blueprint (90 days), we designed an integrated solution that connected field data, financial systems, and subcontractor performance into one platform.\n\nWhat we delivered:\n\n• Real-time Project Dashboards: Centralized visibility into subcontractor performance, costs, and project timelines.\n\n• Predictive Analytics Models: Machine learning models to flag likely delays, cost overruns, and resource shortages.\n\n• Automated Reporting: Customizable reports for project managers and executives to track KPIs daily.\n\n• Subcontractor Monitoring: Performance scoring system with alerts on quality, cost efficiency, and timeliness.\n\n• System Integration: Connected analytics platform to existing project management and financial software.",
+    impact: "• 15% reduction in project overruns via predictive analytics\n• $1.1M annual savings through improved project cost management\n• 20% improvement in delivery timelines with real-time tracking\n• 90% accuracy in subcontractor performance monitoring\n• 18% increase in project profitability via better resource allocation",
+    compliance: "The analytics platform was designed to comply with construction industry standards and contract governance requirements. All data was encrypted and securely integrated with financial systems, ensuring auditability of cost reporting and subcontractor performance data.",
     testimonial: {
       quote: "The project analytics platform has given us unprecedented visibility into our operations and significantly improved our project outcomes.",
       author: "Operations Director",
@@ -358,6 +359,18 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     Leadership needed a way to streamline operations, reduce manual workloads, and ensure compliance with audit and regulatory standards.
                   </p>
                 </div>
+              ) : slug === 'construction-project-analytics' ? (
+                <div className="space-y-4">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    A mid-market general contractor struggled with project cost overruns and schedule delays that impacted profitability and client relationships.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Manual project tracking lacked real-time visibility into subcontractor performance, material costs, and progress across jobsites.
+                  </p>
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    Without predictive analytics, the firm was unable to identify risks early or implement corrective action, leading to missed deadlines, strained client trust, and rising operational costs.
+                  </p>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.challenge}
@@ -477,6 +490,32 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     </ul>
                   </div>
                 </div>
+              ) : slug === 'construction-project-analytics' ? (
+                <div className="space-y-6">
+                  <p className="text-lg text-white/85 leading-relaxed">
+                    L3 delivered a comprehensive project analytics platform with predictive modeling and real-time reporting. After running an AI Readiness Score and Digital Modernization Blueprint (90 days), we designed an integrated solution that connected field data, financial systems, and subcontractor performance into one platform.
+                  </p>
+                  <div>
+                    <p className="text-lg text-white/85 leading-relaxed mb-4">What we delivered:</p>
+                    <ul className="space-y-3 text-lg text-white/85 leading-relaxed pl-6">
+                      <li className="leading-relaxed">
+                        <strong>Real-time Project Dashboards:</strong> Centralized visibility into subcontractor performance, costs, and project timelines.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Predictive Analytics Models:</strong> Machine learning models to flag likely delays, cost overruns, and resource shortages.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Automated Reporting:</strong> Customizable reports for project managers and executives to track KPIs daily.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>Subcontractor Monitoring:</strong> Performance scoring system with alerts on quality, cost efficiency, and timeliness.
+                      </li>
+                      <li className="leading-relaxed">
+                        <strong>System Integration:</strong> Connected analytics platform to existing project management and financial software.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               ) : (
                 <p className="text-lg text-white/85 leading-relaxed">
                   {caseStudy.solution}
@@ -523,6 +562,14 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   <li className="leading-relaxed">95% accuracy in reconciliations, improving audit readiness</li>
                   <li className="leading-relaxed">20% increase in client capacity through efficiency gains</li>
                   <li className="leading-relaxed">35% reduction in overtime costs during peak periods</li>
+                </ul>
+              ) : slug === 'construction-project-analytics' ? (
+                <ul className="space-y-3 text-lg text-white/85 pl-6">
+                  <li className="leading-relaxed">15% reduction in project overruns via predictive analytics</li>
+                  <li className="leading-relaxed">$1.1M annual savings through improved project cost management</li>
+                  <li className="leading-relaxed">20% improvement in delivery timelines with real-time tracking</li>
+                  <li className="leading-relaxed">90% accuracy in subcontractor performance monitoring</li>
+                  <li className="leading-relaxed">18% increase in project profitability via better resource allocation</li>
                 </ul>
               ) : (
                 <div className="text-lg text-white/85 leading-relaxed">
@@ -595,6 +642,8 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                   ? 'Ready to modernize your firm\'s knowledge and cut research time?'
                   : slug === 'accounting-firm-workflow-automation'
                   ? 'Ready to modernize your accounting workflows and save hundreds of hours?'
+                  : slug === 'construction-project-analytics'
+                  ? 'Ready to cut overruns and increase profitability?'
                   : 'Ready to achieve similar results?'
                 }
               </h2>
