@@ -134,9 +134,9 @@ export default function Home() {
         <div className="container">
           <Testimonial
             quote="L3 Strategy Partners transformed our AI capabilities from concept to production in record time. Their expertise in both technical implementation and strategic planning made all the difference."
-            author="Chief Technology Officer, Confidential Company"
-            role=""
-            company=""
+            author="Anonymous"
+            role="Chief Technology Officer"
+            company="Confidential Company"
           />
         </div>
       </section>
