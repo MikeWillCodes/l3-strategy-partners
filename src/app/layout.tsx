@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   publisher: "L3 Strategy Partners",
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: [
+      { url: "/logo-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-64.png", sizes: "64x64", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
