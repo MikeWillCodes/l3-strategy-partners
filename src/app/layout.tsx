@@ -21,14 +21,28 @@ export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/logo-16.png", sizes: "16x16", type: "image/png" },
       { url: "/logo-32.png", sizes: "32x32", type: "image/png" },
       { url: "/logo-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/logo-128.png", sizes: "128x128", type: "image/png" },
+      { url: "/logo-256.png", sizes: "256x256", type: "image/png" },
+      { url: "/logo-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/logo-128.png", sizes: "128x128", type: "image/png" },
+      { url: "/logo-256.png", sizes: "256x256", type: "image/png" },
+      { url: "/logo-512.png", sizes: "512x512", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/logo-512.png",
+        color: "#0891b2",
+      },
+    ],
   },
   openGraph: {
     type: "website",
@@ -36,12 +50,22 @@ export const metadata: Metadata = {
     siteName: "L3 Strategy Partners",
     title: "L3 Strategy Partners - Unlock Your Path to Scalable AI Success",
     description: "Leading AI strategy consulting firm helping organizations develop scalable AI applications and data modernization solutions.",
+    images: [
+      {
+        url: "/logo-1024.png",
+        width: 1024,
+        height: 1024,
+        alt: "L3 Strategy Partners Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "L3 Strategy Partners - Unlock Your Path to Scalable AI Success",
     description: "Leading AI strategy consulting firm helping organizations develop scalable AI applications and data modernization solutions.",
+    images: ["/logo-1024.png"],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
