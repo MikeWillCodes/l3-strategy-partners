@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Target, Award, Zap, CheckCircle, Clock, Globe, TrendingUp, Building, Heart, Lightbulb, Users2, Cog } from "lucide-react";
+import { ArrowRight, Users, Target, Award, Zap, CheckCircle, Globe, TrendingUp, Building, Heart, Lightbulb, Users2, Cog } from "lucide-react";
 
 const stats = [
   { value: "2025", label: "Founded", delay: 0, icon: Building },
@@ -309,7 +309,7 @@ export default function AboutPage() {
               Join Us in Shaping the Future of AI
             </h2>
             <p className="text-2xl text-white/90 mb-10 leading-relaxed">
-              Whether you're transforming your organization or exploring career opportunities, we'd love to hear from you.
+              Whether you&apos;re transforming your organization or exploring career opportunities, we&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 

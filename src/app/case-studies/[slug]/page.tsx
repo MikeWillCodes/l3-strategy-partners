@@ -208,13 +208,13 @@ const caseStudyDetails = {
 };
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function CaseStudyDetailPage({ params }: PageProps) {
-  const { slug } = params;
+export default async function CaseStudyDetailPage({ params }: PageProps) {
+  const { slug } = await params;
   const caseStudy = caseStudyDetails[slug as keyof typeof caseStudyDetails];
 
   if (!caseStudy) {
@@ -378,7 +378,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                     A mid-market real estate developer struggled with inefficient leasing processes and limited insights into tenant behavior patterns.
                   </p>
                   <p className="text-lg text-white/85 leading-relaxed">
-                    Manual market analysis couldn't provide real-time visibility into leasing opportunities and tenant preferences.
+                    Manual market analysis couldn&apos;t provide real-time visibility into leasing opportunities and tenant preferences.
                   </p>
                   <p className="text-lg text-white/85 leading-relaxed">
                     The lack of predictive modeling made it difficult to optimize lease terms, pricing strategies, and property positioning.
@@ -459,7 +459,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
                         <strong>Data + Telemetry (Internet of Things, IoT):</strong> Deployed sensors on critical drilling equipment and built secure data pipelines for real‑time telemetry.
                       </li>
                       <li className="leading-relaxed">
-                        <strong>Predictive Maintenance (Tailored AI Solutions):</strong> Trained machine learning (ML) models tuned to the client's operating conditions to forecast failures and surface early warnings.
+                        <strong>Predictive Maintenance (Tailored AI Solutions):</strong> Trained machine learning (ML) models tuned to the client&apos;s operating conditions to forecast failures and surface early warnings.
                       </li>
                       <li className="leading-relaxed">
                         <strong>Process Automation:</strong> Implemented automated alerts, work order creation, and maintenance scheduling to reduce response lag and manual checks.
@@ -780,7 +780,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
             </motion.div>
 
             {/* Compliance Note (Healthcare cases only) */}
-            {(caseStudy as any).compliance && (
+            {'compliance' in caseStudy && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -790,7 +790,7 @@ export default function CaseStudyDetailPage({ params }: PageProps) {
               >
                 <h2 className="text-xl font-semibold text-white mb-4">Compliance & Privacy</h2>
                 <p className="text-white/85 leading-relaxed">
-                  {(caseStudy as any).compliance}
+                  {'compliance' in caseStudy ? (caseStudy as { compliance: string }).compliance : ''}
                 </p>
               </motion.div>
             )}

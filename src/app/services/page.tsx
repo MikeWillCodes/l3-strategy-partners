@@ -197,7 +197,8 @@ const packages = [
 ];
 
 export default function ServicesPage() {
-  const handleStepClick = (stepId: string) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleStepClick = (_stepId: string) => {
     // Smooth scroll to engagement process accordion
     const element = document.getElementById('engagement-process');
     element?.scrollIntoView({ behavior: 'smooth' });

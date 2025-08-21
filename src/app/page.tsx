@@ -9,16 +9,11 @@ import { LogosMarquee } from "@/components/site/LogosMarquee";
 
 import { 
   Brain, 
-  Database, 
-  Shield, 
   Zap, 
   Target, 
-  TrendingUp,
-  Lightbulb,
   Settings,
   CheckCircle,
-  Users,
-  BarChart
+  Users
 } from "lucide-react";
 
 const features = [
