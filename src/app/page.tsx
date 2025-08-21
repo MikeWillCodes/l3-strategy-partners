@@ -50,9 +50,9 @@ const features = [
 ];
 
 const stats = [
-  { value: "2023", label: "Founded", delay: 0 },
-  { value: "100+", label: "Clients Served", delay: 0.1 },
-  { value: "100+", label: "Projects Delivered", delay: 0.2 },
+  { value: "2025", label: "Founded", delay: 0 },
+  { value: "10+", label: "Team Members", delay: 0.1 },
+  { value: "10+", label: "Projects Delivered", delay: 0.2 },
   { value: "15+", label: "Years of Experience", delay: 0.3 }
 ];
 
@@ -66,7 +66,7 @@ export default function Home() {
       <LogosMarquee />
 
       {/* Features Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-24 lg:py-40">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-section-hero mb-6">
-              Comprehensive AI Solutions for SMB & Mid-Market
+              L3 Delivers <span className="text-gradient">Comprehensive AI Solutions</span> for Your Organization
             </h2>
             <p className="text-xl text-white/85 max-w-3xl mx-auto">
               From strategy to implementation, we provide end-to-end AI consulting services 
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 border-y border-white/10 bg-panel/20">
+      <section className="py-24 lg:py-32 border-y border-white/10 bg-panel/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-section-hero mb-6">
+            <h2 className="text-section-hero-gradient mb-6">
               Proven Track Record
             </h2>
             <p className="text-xl text-white/85 max-w-2xl mx-auto">
@@ -134,9 +134,9 @@ export default function Home() {
         <div className="container">
           <Testimonial
             quote="L3 Strategy Partners transformed our AI capabilities from concept to production in record time. Their expertise in both technical implementation and strategic planning made all the difference."
-            author="Sarah Chen"
-            role="Chief Technology Officer"
-            company="TechForward Inc"
+            author="Chief Technology Officer, Confidential Company"
+            role=""
+            company=""
           />
         </div>
       </section>

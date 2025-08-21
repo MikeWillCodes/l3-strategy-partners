@@ -10,7 +10,7 @@
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.85);
   --ring: rgba(139, 92, 246, 0.5);
-  --iris: conic-gradient(from 0deg, #7cf6ff, #7b5cff, #ff6ad5, #ffd36e, #70ffa5, #7cf6ff);
+  --iris: linear-gradient(135deg, #10b981, #0ea5e9, #d946ef);
   
   /* shadcn/ui tokens mapped to Scale colors */
   --background: var(--bg);
@@ -19,7 +19,7 @@
   --card-foreground: var(--text);
   --popover: var(--panel-strong);
   --popover-foreground: var(--text);
-  --primary: #7b5cff;
+  --primary: #0891b2;
   --primary-foreground: #ffffff;
   --secondary: var(--panel-strong);
   --secondary-foreground: var(--text);

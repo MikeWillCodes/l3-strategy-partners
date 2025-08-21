@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -38,28 +38,18 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex justify-center items-center"
           >
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-4 h-auto"
+              className="relative overflow-hidden bg-cyan-600 hover:bg-amber-500 text-white font-semibold text-lg px-8 py-4 h-auto transition-all duration-300 group hover:shadow-lg hover:scale-105"
             >
-              <Link href="/contact" aria-label="Book a consultation to get started">
-                Book Consultation Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white/20 hover:bg-white/5 text-white font-semibold text-lg px-8 py-4 h-auto"
-            >
-              <Link href="/ai-readiness" aria-label="Get your AI readiness score">
-                <Play className="mr-2 h-5 w-5" />
-                Get Your AI Readiness Score
+              <Link href="/contact" aria-label="Book a consultation to get started" className="relative">
+                <span className="relative z-10 group-hover:underline decoration-2 underline-offset-4">
+                  Book Consultation Now
+                </span>
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </motion.div>

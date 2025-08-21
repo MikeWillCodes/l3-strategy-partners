@@ -17,16 +17,24 @@ export function FeatureCard({ icon: Icon, title, description, delay = 0 }: Featu
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
-      className="card p-6 hover:bg-panel-strong transition-colors duration-300 group"
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="relative group cursor-pointer"
     >
-      <div className="mb-4">
-        <div className="inline-flex p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-          <Icon className="h-6 w-6 text-primary" />
+      {/* Glass card with improved styling */}
+      <div className="relative rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.35)] p-8 h-full transition-all duration-500 group-hover:shadow-[0_0_60px_rgba(16,185,129,0.15)] group-hover:border-white/20">
+        {/* Subtle abstract background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-sky-500/5 to-fuchsia-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Icon section */}
+        <div className="relative mb-6">
+          <div className="inline-flex p-4 rounded-xl bg-gradient-to-br from-emerald-500/10 via-sky-500/10 to-fuchsia-500/10 group-hover:from-emerald-500/20 group-hover:via-sky-500/20 group-hover:to-fuchsia-500/20 transition-all duration-500 group-hover:scale-110">
+            <Icon className="h-8 w-8 text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300" />
+          </div>
         </div>
+        
+        <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-white/95 transition-colors duration-300">{title}</h3>
+        <p className="text-white/85 leading-relaxed group-hover:text-white/90 transition-colors duration-300">{description}</p>
       </div>
-      
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-white/85 leading-relaxed">{description}</p>
     </motion.div>
   );
 }
