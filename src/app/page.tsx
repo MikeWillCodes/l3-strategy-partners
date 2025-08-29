@@ -65,24 +65,24 @@ export default function Home() {
       <LogosMarquee />
 
       {/* Features Section */}
-      <section className="py-24 lg:py-40">
+      <section className="section-spacing">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">
+            <h2 className="text-section-hero mb-6">
               L3 Delivers <span className="text-gradient">Product Management-as-a-Service</span>
             </h2>
-            <p className="text-xl text-white/85 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground narrow-wrapper">
               From discovery to delivery, we embed experienced product leadership so your team ships the right thing on time.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12">
             {features.map((feature, index) => (
               <FeatureCard
                 key={feature.title}
@@ -97,24 +97,24 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 lg:py-32 border-y border-white/10 bg-panel/20">
+      <section className="section-spacing border-y border-white/10 bg-panel/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">
+            <h2 className="text-section-hero mb-6">
               Proven Track Record
             </h2>
-            <p className="text-xl text-white/85 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground narrow-wrapper">
               Our product leadership is measured by shipped features and business impact.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mt-12">
             {stats.map((stat) => (
               <Stat
                 key={stat.label}
@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 lg:py-32">
+      <section className="section-spacing">
         <div className="container">
           <Testimonial
             quote="L3 gave us clarity and cadence. In two sprints, our PM Pod turned a vague backlog into a roadmap and helped us launch on schedule."

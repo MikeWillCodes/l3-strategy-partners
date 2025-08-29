@@ -43,11 +43,16 @@ const countries = [
   "Australia", "Japan", "Singapore", "Netherlands", "Switzerland", "Other"
 ];
 
+// PMaaS = Product Management as a Service
 const topics = [
-  "AI Strategy Consulting",
-  "AI Readiness Score",
-  "Digital Modernization",
-  "Process Automation",
+  "Discovery Sprint (2-week validation)",
+  "The PM Pod (PMaaS)",
+  "Delivery & Sprint Operations",
+  "Product Analytics & Metrics",
+  "Go-to-Market Alignment",
+  "Scaling & Org Design",
+  "Partnership Opportunity",
+  "Careers / Contractor",
   "General Inquiry"
 ];
 
@@ -107,7 +112,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="card p-8 text-center"
+        className="card card-padding text-center"
       >
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
         <h3 className="text-2xl font-semibold text-text mb-2">Thank You!</h3>
@@ -129,8 +134,8 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="card p-8"
+      transition={{ duration: 0.5 }}
+      className="card card-padding"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -310,7 +315,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             type="submit" 
             size="lg"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-full"
           >
             {isSubmitting ? (
               <>

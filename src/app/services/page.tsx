@@ -212,13 +212,13 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section className="section-spacing">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="narrow-wrapper text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="text-page-hero mb-6"
             >
               Product Management{" "}
@@ -228,8 +228,8 @@ export default function ServicesPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-xl text-muted-foreground mb-8"
             >
               From discovery to delivery, we embed product leadership so startups and SMBs ship the right product faster.
             </motion.p>
@@ -237,13 +237,11 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Button 
                 asChild 
                 size="lg" 
-                className="text-lg px-8 py-4 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 data-analytics="services_hero_cta_click"
               >
                 <Link 
@@ -259,33 +257,37 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="card p-6 hover:bg-panel-strong transition-colors duration-300 group cursor-pointer"
+                className="card card-padding hover:bg-panel-strong transition-colors duration-300 group cursor-pointer"
                 onClick={() => {
                   const element = document.getElementById(service.anchor);
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <div className="mb-4">
-                  <div className="inline-flex p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                    <service.icon className="h-6 w-6 text-primary" />
+                <div className="flex flex-col gap-4 h-full">
+                  {/* Icon chip */}
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <service.icon className="w-5 h-5 text-primary" />
                   </div>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-white/85 text-sm leading-relaxed">{service.description}</p>
-                
-                <div className="mt-4 flex items-center text-primary text-sm font-medium">
-                  Learn more <ArrowRight className="ml-1 h-3 w-3" />
+                  
+                  {/* Content */}
+                  <div className="flex flex-col gap-4 flex-1">
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed flex-1">{service.description}</p>
+                    
+                    <div className="flex items-center text-primary text-sm font-medium mt-auto">
+                      Learn more <ArrowRight className="ml-1 w-3 h-3" />
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -298,20 +300,20 @@ export default function ServicesPage() {
         <section 
           key={service.id}
           id={service.id}
-          className={`py-16 ${index % 2 === 1 ? 'bg-panel/20' : ''}`}
+          className={`section-spacing ${index % 2 === 1 ? 'bg-panel/20' : ''}`}
         >
           <div className="container">
             <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-section-hero-gradient mb-4">{service.title}</h2>
-                <p className="text-xl text-white/85 mb-8">{service.subtitle}</p>
+                <h2 className="text-section-hero mb-6">{service.title}</h2>
+                <p className="text-xl text-muted-foreground">{service.subtitle}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
                   <div className="space-y-6">
                     {service.outcomes && (
                       <div>
@@ -319,8 +321,8 @@ export default function ServicesPage() {
                         <ul className="space-y-2">
                           {service.outcomes.map((outcome, idx) => (
                             <li key={idx} className="flex items-start">
-                              <CheckCircle className="h-4 w-4 text-primary mt-1 mr-2 flex-shrink-0" />
-                              <span className="text-white/85 text-sm">{outcome}</span>
+                              <CheckCircle className="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0" />
+                              <span className="text-muted-foreground">{outcome}</span>
                             </li>
                           ))}
                         </ul>
@@ -329,7 +331,7 @@ export default function ServicesPage() {
                     
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-3">Deliverables</h3>
-                      <p className="text-white/85 text-sm">{service.deliverables}</p>
+                      <p className="text-muted-foreground">{service.deliverables}</p>
                     </div>
                   </div>
                   
@@ -337,16 +339,16 @@ export default function ServicesPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-3">Timeline</h3>
                       <div className="flex items-center">
-                        <Calendar className="h-4 w-4 text-primary mr-2" />
-                        <span className="text-white/85 text-sm">{service.timeline}</span>
+                        <Calendar className="w-4 h-4 text-primary mr-2" />
+                        <span className="text-muted-foreground">{service.timeline}</span>
                       </div>
                     </div>
                     
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-3">Sample KPIs</h3>
                       <div className="flex items-start">
-                        <TrendingUp className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-white/85 text-sm">{service.kpis}</span>
+                        <TrendingUp className="w-4 h-4 text-primary mr-2 mt-1 flex-shrink-0" />
+                        <span className="text-muted-foreground">{service.kpis}</span>
                       </div>
                     </div>
                     
@@ -365,30 +367,30 @@ export default function ServicesPage() {
       ))}
 
       {/* Packages Section */}
-      <section className="py-20 border-y border-white/10 bg-panel/20">
+      <section className="section-spacing border-y border-white/10 bg-panel/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Service Packages</h2>
-            <p className="text-xl text-white/85 max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Service Packages</h2>
+            <p className="text-xl text-muted-foreground narrow-wrapper">
               Choose the engagement model that fits your timeline and transformation goals.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mt-12">
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative card p-8 text-center min-h-[260px] min-w-[360px] group cursor-pointer hover:scale-105 hover:ring-2 hover:ring-primary/30 transition-all duration-300 focus-within:ring-2 focus-within:ring-primary/50 ${
+                className={`relative card card-padding text-center group cursor-pointer hover:bg-panel-strong transition-colors duration-300 focus-within:ring-2 focus-within:ring-primary/50 ${
                   pkg.popular ? 'border-primary/50 bg-primary/5' : ''
                 }`}
                 onClick={() => {
@@ -415,13 +417,13 @@ export default function ServicesPage() {
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
                   <p className="text-primary font-semibold text-lg mb-3">{pkg.duration}</p>
-                  <p className="text-white/85 text-sm mb-4">{pkg.description}</p>
+                  <p className="text-muted-foreground mb-4">{pkg.description}</p>
                 </div>
                 
                 <div className="space-y-2 mb-8">
                   {pkg.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center justify-center text-sm text-white/85">
-                      <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <div key={idx} className="flex items-center justify-center text-sm text-muted-foreground">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                       <span>{benefit}</span>
                     </div>
                   ))}
@@ -430,12 +432,12 @@ export default function ServicesPage() {
                 <div className="mt-auto">
                   <Button 
                     size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 text-black font-semibold group-hover:scale-105 transition-transform duration-200"
+                    className="w-full"
                     data-analytics="services_package_cta_click"
                     aria-label={`${pkg.cta} - ${pkg.name} package`}
                   >
                     {pkg.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
               </motion.div>
@@ -445,49 +447,50 @@ export default function ServicesPage() {
       </section>
 
       {/* Three-Step Process */}
-      <section id="engagement-process" className="py-20">
+      <section id="engagement-process" className="section-spacing">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Our Engagement Process</h2>
-            <p className="text-xl text-white/85 max-w-2xl mx-auto">
+            <h2 className="text-section-hero mb-6">Our Engagement Process</h2>
+            <p className="text-xl text-muted-foreground narrow-wrapper">
               A proven three-step approach to product delivery
             </p>
           </motion.div>
 
-          <ThreeStepProcess onStepClick={handleStepClick} />
+          <div className="mt-12">
+            <ThreeStepProcess onStepClick={handleStepClick} />
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 border-t border-white/10 bg-panel/20">
+      <section className="section-spacing border-t border-white/10 bg-panel/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center narrow-wrapper"
           >
             <h2 className="text-section-hero mb-6">
               Ready to Ship the Right Product?
             </h2>
-            <p className="text-xl text-white/85 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Let&apos;s embed product leadership and give your team clarity, cadence, and confidence.
             </p>
             <Button 
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link href="/contact">
                 Book a Discovery Sprint
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
           </motion.div>

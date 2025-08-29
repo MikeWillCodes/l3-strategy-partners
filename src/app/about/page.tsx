@@ -66,14 +66,14 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 relative">
+      <section className="section-spacing relative">
         <div className="container">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="narrow-wrapper text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl lg:text-6xl font-light tracking-tight text-white mb-8"
+              transition={{ duration: 0.5 }}
+              className="text-page-hero mb-6"
             >
               Our Mission is to help startups build the right product,{" "}
               <span className="text-gradient">faster</span>.
@@ -82,8 +82,8 @@ export default function AboutPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-xl leading-relaxed text-white/85 mb-10 max-w-4xl mx-auto"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-xl text-muted-foreground mb-8"
             >
               We deliver Product Management-as-a-Service (PMaaS): discovery, roadmap, and delivery discipline without the overhead of a full-time PM team.
             </motion.p>
@@ -91,16 +91,15 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Button 
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <Link href="/contact">
                   Start a Conversation
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
             </motion.div>
@@ -109,116 +108,111 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 relative">
+      <section className="section-spacing relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Who We Are</h2>
+            <h2 className="text-section-hero mb-6">Who We Are</h2>
+            <p className="text-2xl text-muted-foreground narrow-wrapper">
+              Our team is comprised of experienced product leaders who are alumni of Amazon, Google, Microsoft, PayPal, Gartner, McKinsey, and BCG.
+            </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <p className="text-2xl text-white/90 text-center max-w-4xl mx-auto leading-relaxed">
-                Our team is comprised of experienced product leaders who are alumni of Amazon, Google, Microsoft, PayPal, Gartner, McKinsey, and BCG.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {teamHighlights.map((highlight, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="card p-8 hover:scale-105 hover:shadow-2xl hover:border-white/20 transition-all duration-300 group min-h-[180px]"
-                >
-                  <div className="flex flex-col items-start h-full">
-                    <CheckCircle className="h-8 w-8 text-emerald-400 mb-4 flex-shrink-0" />
-                    <h3 className="text-xl font-semibold text-white mb-3">{highlight.title}</h3>
-                    <p className="text-white/90 leading-relaxed flex-grow">{highlight.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12">
+            {teamHighlights.map((highlight, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card card-padding hover:bg-panel-strong transition-colors duration-300 h-full"
+              >
+                <div className="flex flex-col gap-4 h-full">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-primary" />
                   </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-                At L3, we bridge the gap between vision and implementation, combining product expertise with strategic advisory to deliver tangible results for startups and growth companies.
-              </p>
-            </motion.div>
+                  <div className="flex flex-col gap-4 flex-1">
+                    <h3 className="text-xl font-semibold text-white">{highlight.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed flex-1">{highlight.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-xl text-muted-foreground narrow-wrapper">
+              At L3, we bridge the gap between vision and implementation, combining product expertise with strategic advisory to deliver tangible results for startups and growth companies.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 border-y border-white/10 bg-panel/20 relative">
+      <section className="section-spacing border-y border-white/10 bg-panel/20 relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Impact</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-section-hero mb-6">Impact</h2>
+            <p className="text-xl text-muted-foreground narrow-wrapper">
               Founded to deliver nimble, high-impact product leadership without the bureaucracy of traditional firms.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mt-12">
             {stats.map((stat) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: stat.delay }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: stat.delay }}
                 viewport={{ once: true }}
-                className="text-center p-6 card hover:scale-105 transition-all duration-300"
+                className="text-center"
               >
-                <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 mb-4">
-                  <stat.icon className="h-8 w-8 text-emerald-400" />
+                <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
+                  <stat.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-5xl lg:text-6xl font-bold text-gradient mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-white/85 font-medium uppercase tracking-wide">
+                <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">
                   {stat.label}
                 </div>
               </motion.div>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12">
             {impactBullets.map((bullet, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300"
+                className="card card-padding"
               >
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 mt-2 mr-4 flex-shrink-0" />
-                <p className="text-lg text-white/90 leading-relaxed">{bullet}</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-400 mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground leading-relaxed">{bullet}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -226,36 +220,38 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 relative">
+      <section className="section-spacing relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Values</h2>
+            <h2 className="text-section-hero mb-6">Values</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="card p-10 hover:scale-[1.02] hover:bg-panel-strong hover:border-white/20 transition-all duration-300 group min-h-[220px]"
+                className="card card-padding hover:bg-panel-strong transition-colors duration-300 h-full"
               >
-                <div className="mb-8">
-                  <div className="inline-flex p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 group-hover:from-emerald-500/20 group-hover:to-cyan-500/20 transition-colors duration-300">
-                    <value.icon className="h-10 w-10 text-emerald-400" />
+                <div className="flex flex-col gap-4 h-full">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <value.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  
+                  <div className="flex flex-col gap-4 flex-1">
+                    <h3 className="text-2xl font-semibold text-white">{value.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed flex-1">{value.description}</p>
                   </div>
                 </div>
-                
-                <h3 className="text-3xl font-semibold text-white mb-6">{value.title}</h3>
-                <p className="text-lg text-white/90 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -263,59 +259,49 @@ export default function AboutPage() {
       </section>
 
       {/* Culture Section */}
-      <section className="py-20 border-t border-white/10 bg-panel/20 relative">
+      <section className="section-spacing border-t border-white/10 bg-panel/20 relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-section-hero-gradient mb-6">Culture</h2>
-          </motion.div>
-
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <p className="text-xl text-white/90 leading-relaxed">
+            <h2 className="text-section-hero mb-6">Culture</h2>
+            <div className="narrow-wrapper mt-12">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 At L3, culture is more than a set of values — it&apos;s how we work every day. We prize innovation and continuous learning, encouraging curiosity and experimentation so our teams and clients can stay ahead of change. Collaboration is at the core of everything we do, with diverse skill sets and perspectives driving smarter problem-solving and better outcomes. We take ownership of results, holding ourselves accountable to our clients and to each other, and we set high standards of technical excellence in every engagement. Above all, our culture is anchored in client success: every decision, every deliverable, and every milestone is focused on helping organizations build the right product with confidence.
               </p>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Closing CTA Section */}
-      <section className="py-20 relative">
+      <section className="section-spacing relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center narrow-wrapper"
           >
-            <h2 className="text-4xl lg:text-5xl font-light tracking-tight text-gradient mb-8">
+            <h2 className="text-section-hero mb-6">
               Ready to Ship the Right Product?
             </h2>
-            <p className="text-2xl text-white/90 mb-10 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8">
               Let&apos;s embed product leadership and give your team clarity, cadence, and confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group px-8 py-4 text-lg"
               >
                 <Link href="/contact">
                   Start a Conversation
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               
@@ -323,11 +309,10 @@ export default function AboutPage() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 hover:bg-white/5 text-white font-semibold rounded-2xl hover:border-white/30 transition-all duration-300 group px-8 py-4 text-lg"
               >
                 <Link href="/careers">
                   View Careers
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
             </div>
