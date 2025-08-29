@@ -18,177 +18,182 @@ import { ThreeStepProcess } from "@/components/graphics/ThreeStepProcess";
 
 const services = [
   {
-    icon: Brain,
-    title: "AI Strategy & Adoption",
-    description: "From pilot to scale with governance and change management.",
-    anchor: "ai-strategy"
-  },
-  {
-    icon: CheckCircle,
-    title: "AI Readiness Score",
-    description: "Fast assessment to identify gaps and quick wins.",
-    anchor: "ai-readiness"
-  },
-  {
     icon: Target,
-    title: "Digital Modernization Blueprint",
-    description: "Practical 90-day plan with priorities.",
-    anchor: "digital-modernization"
+    title: "Discovery Sprint",
+    description: "2-week engagement to validate the problem, define success metrics, and produce a 90-day plan.",
+    anchor: "discovery-sprint"
   },
   {
     icon: Users,
-    title: "Customer Experience Optimization",
-    description: "AI-assisted service and personalization.",
-    anchor: "customer-experience"
+    title: "The PM Pod",
+    description: "Your embedded PM team: Principal, Senior, and Associate PMs who run roadmap, sprints, and stakeholder alignment.",
+    anchor: "pm-pod"
   },
   {
-    icon: Settings,
-    title: "Process Automation",
-    description: "Automations that save hours each week.",
-    anchor: "process-automation"
+    icon: CheckCircle,
+    title: "Delivery & Sprint Operations",
+    description: "Backlog hygiene, sprint planning, QA handoff, and release notes that keep engineering unblocked.",
+    anchor: "delivery-operations"
+  },
+  {
+    icon: Brain,
+    title: "Product Analytics & Metrics",
+    description: "North Star Metric, KPI tree, tracking plan, and dashboards for clarity and accountability.",
+    anchor: "product-analytics"
   },
   {
     icon: Zap,
-    title: "Tailored AI Solutions",
-    description: "Custom co-pilots and domain models.",
-    anchor: "tailored-solutions"
+    title: "Go-to-Market Alignment",
+    description: "Positioning, pricing tests, and launch planning to ensure adoption and growth.",
+    anchor: "go-to-market"
+  },
+  {
+    icon: Settings,
+    title: "Scaling & Org Design",
+    description: "OKRs, hiring profiles, governance, and operating playbooks to scale product leadership.",
+    anchor: "scaling-org-design"
   }
 ];
 
 const serviceDetails = [
   {
-    id: "ai-strategy",
-    title: "AI Strategy & Adoption",
-    subtitle: "Who it's for: Leaders who need an AI roadmap and a way to scale wins.",
+    id: "discovery-sprint",
+    title: "Discovery Sprint",
+    subtitle: "Who it's for: Founders and teams that need clarity before building.",
     outcomes: [
-      "Aligned vision and prioritized use-cases tied to measurable business value.",
-      "Governance model (risk, data, ethics) and adoption plan.",
-      "12-month roadmap with dependencies and investment profile.",
-      "Change-management playbook and training paths."
+      "Validated problem statement",
+      "Success metrics + KPIs",
+      "Prioritized opportunity list",
+      "90-day plan"
     ],
-    deliverables: "Strategy deck, 12-month roadmap, governance charter, use-case backlog, training plan",
-    timeline: "4–6 weeks",
-    kpis: "Time saved per process, cycle-time reduction, adoption rate, incident rate, CSAT",
-    cta: "Book Consultation",
+    deliverables: "Research plan, interview notes, opportunity tree, success metrics sheet, 90-day plan",
+    timeline: "2 weeks",
+    kpis: "Decision confidence, # risks retired, time-to-plan",
+    cta: "Start My Discovery Sprint",
     ctaLink: "/contact"
   },
   {
-    id: "ai-readiness",
-    title: "AI Readiness Score", 
-    subtitle: "What you get: A 360° score across People, Data, Tech, Process, Risk with quick wins.",
+    id: "pm-pod",
+    title: "The PM Pod",
+    subtitle: "Your Product Management-as-a-Service (PMaaS) team.",
     outcomes: [
-      "Baseline maturity score across People, Data, Tech, Process, Risk with benchmark.",
-      "Top 10 quick wins prioritized by impact/effort.",
-      "Gap analysis for data, platform, and policy.",
-      "30-60-90 plan with owners and checkpoints."
+      "Roadmap clarity",
+      "Predictable sprints",
+      "Alignment across functions",
+      "Faster iteration cycles"
     ],
-    deliverables: "Benchmark scorecard, maturity heatmap, top 10 opportunities, 30-60-90 plan",
-    timeline: "10 business days",
-    kpis: "Baseline vs. target readiness, # quick wins shipped in 30 days",
-    cta: "Get Your AI Readiness Score",
-    ctaLink: "/ai-readiness"
-  },
-  {
-    id: "digital-modernization",
-    title: "Digital Modernization Blueprint (90 days)",
-    subtitle: "Focus: Data foundations, platform choices, and integration plan.",
-    outcomes: [
-      "Target reference architecture (incl. RAG patterns) and platform choice rationale.",
-      "Sequenced migration plan with cost envelope and risk controls.",
-      "Reusable integration patterns and dev guardrails.",
-      "Backlog with estimates for the first 90 days."
-    ],
-    deliverables: "Target architecture, reference patterns (including RAG), backlog with estimates, migration plan, cost envelope",
-    timeline: "3–4 weeks planning + 90-day execution plan",
-    kpis: "Data pipeline reliability, latency, cost per inference/process, security posture",
-    cta: "See the 90-Day Plan",
+    deliverables: "Roadmap, backlog, PRDs, release notes, stakeholder updates",
+    timeline: "Ongoing, monthly",
+    kpis: "On-time delivery %, sprint velocity, release frequency, adoption rate",
+    cta: "Meet The PM Pod",
     ctaLink: "/contact"
   },
   {
-    id: "customer-experience",
-    title: "Customer Experience Optimization",
-    subtitle: "Use-cases: AI triage, agent assist, self-service, personalization.",
+    id: "delivery-operations",
+    title: "Delivery & Sprint Operations",
+    subtitle: "Install the operating system for shipping.",
     outcomes: [
-      "Faster resolution with agent assist and smart self-service.",
-      "Higher CSAT and reduced average handle time.",
-      "Personalization playbook across key journeys.",
-      "Analytics + guardrails for quality and safety."
+      "Backlog hygiene",
+      "QA handoffs",
+      "Release cadence",
+      "Sprint rituals"
     ],
-    deliverables: "Journey map with AI moments, bot/agent flows, pilot build, analytics and guardrails",
-    timeline: "4–8 weeks to first pilot",
-    kpis: "CSAT, first-contact resolution, average handle time, deflection rate, revenue per visitor",
-    cta: "Improve CX",
+    deliverables: "Working agreements, ticket templates, QA checklist, release template",
+    timeline: "2–4 weeks",
+    kpis: "Lead time, escaped bugs, planned vs delivered %",
+    cta: "Optimize Delivery",
     ctaLink: "/contact"
   },
   {
-    id: "process-automation",
-    title: "Process Automation", 
-    subtitle: "Scope: Identify high-ROI automations across finance, ops, sales, and support.",
+    id: "product-analytics",
+    title: "Product Analytics & Metrics",
+    subtitle: "Make decisions with data, not guesswork.",
     outcomes: [
-      "Hours saved and throughput increased in priority workflows.",
-      "Error rate and rework reduced with auditable steps.",
-      "SLA adherence improved with alerts and dashboards.",
-      "Enablement kit so teams can scale automations."
+      "North Star Metric",
+      "KPI tree",
+      "Event schema",
+      "Dashboards",
+      "Experiment backlog"
     ],
-    deliverables: "Automation backlog, 2–3 pilots, documentation, training",
-    timeline: "2–6 weeks to first production automation",
-    kpis: "Hours saved/month, error rate, throughput, SLA adherence",
-    cta: "Automate a Workflow",
+    deliverables: "Metric tree, tracking plan, dashboard spec, experiment templates",
+    timeline: "1–3 weeks",
+    kpis: "Dashboard usage, experiment velocity, metric coverage %",
+    cta: "Instrument My Product",
     ctaLink: "/contact"
   },
   {
-    id: "tailored-solutions",
-    title: "Tailored AI Solutions",
-    subtitle: "Examples: Team co-pilots, industry copilots, forecasting, compliance summarization, custom RAG apps.",
+    id: "go-to-market",
+    title: "Go-to-Market Alignment",
+    subtitle: "Connect product, marketing, and sales.",
     outcomes: [
-      "Working prototype to production with clear acceptance tests.",
-      "Secure data integrations and evaluation harness.",
-      "Safety checklist and monitoring for drift/quality.",
-      "Documented runbook for handoff and iteration."
+      "Positioning",
+      "Pricing tests",
+      "Launch plan",
+      "Enablement",
+      "Post-launch AARs"
     ],
-    deliverables: "Solution spec, prototype, integration, evaluation + safety checklist",
-    timeline: "6–10 weeks typical MVP",
-    kpis: "Task completion rate, speed-to-answer, cost per task, accuracy",
-    cta: "Design Your Co-Pilot",
+    deliverables: "Messaging brief, pricing test plan, launch checklist, enablement kit, post-launch review",
+    timeline: "2–6 weeks",
+    kpis: "Activation rate, conversion %, sales feedback adoption",
+    cta: "Align GTM",
+    ctaLink: "/contact"
+  },
+  {
+    id: "scaling-org-design",
+    title: "Scaling & Org Design",
+    subtitle: "Graduate from heroics to a durable product org.",
+    outcomes: [
+      "OKRs",
+      "Hiring profiles",
+      "Governance",
+      "Operating rhythm",
+      "Playbooks"
+    ],
+    deliverables: "OKR packet, hiring scorecards, governance charter, process playbooks",
+    timeline: "4–8 weeks",
+    kpis: "Goal attainment %, planning accuracy, employee eNPS",
+    cta: "Scale the Org",
     ctaLink: "/contact"
   }
 ];
 
 const packages = [
   {
-    name: "Starter",
+    name: "Discovery Sprint",
     duration: "2 weeks",
-    description: "Perfect for exploring AI opportunities and quick wins",
+    description: "Validation, metrics, risks retired, 90-day plan",
     benefits: [
-      "AI readiness assessment",
-      "Top 5 quick wins identified", 
-      "30-day action plan"
+      "Validation",
+      "Metrics", 
+      "Risks retired",
+      "90-day plan"
     ],
-    cta: "Get Started",
+    cta: "Book a Discovery Sprint",
     ctaLink: "/contact",
     popular: false
   },
   {
-    name: "Sprint", 
-    duration: "6 weeks",
-    description: "Ideal for building your AI foundation and first pilots",
+    name: "The PM Pod", 
+    duration: "Monthly",
+    description: "Embedded PM leadership, roadmap + sprints, delivery + releases",
     benefits: [
-      "Complete AI strategy & roadmap",
-      "2-3 pilots shipped to production",
-      "Governance model & training"
+      "Embedded PM leadership",
+      "Roadmap + sprints",
+      "Delivery + releases"
     ],
-    cta: "Plan My Sprint",
+    cta: "Start My PM Pod",
     ctaLink: "/contact",
     popular: true
   },
   {
     name: "Scale",
-    duration: "12 weeks", 
-    description: "Comprehensive transformation with multiple use cases",
+    duration: "Quarterly", 
+    description: "OKRs, hiring, governance, playbooks",
     benefits: [
-      "Platform architecture & patterns",
-      "5+ use cases in production", 
-      "Runbook for scaling AI"
+      "OKRs",
+      "Hiring", 
+      "Governance",
+      "Playbooks"
     ],
     cta: "Scale with L3",
     ctaLink: "/contact",
@@ -216,7 +221,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="text-page-hero mb-6"
             >
-              Expert AI Consulting{" "}
+              Product Management{" "}
               <span className="text-gradient">Services</span>
             </motion.h1>
             
@@ -226,7 +231,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-xl text-white/85 mb-8 max-w-3xl mx-auto"
             >
-              From strategy to implementation, we help SMBs and mid-market organizations turn AI into measurable business outcomes.
+              From discovery to delivery, we embed product leadership so startups and SMBs ship the right product faster.
             </motion.p>
             
             <motion.div
@@ -243,9 +248,9 @@ export default function ServicesPage() {
               >
                 <Link 
                   href="/contact"
-                  aria-label="Book Consultation on Services page"
+                  aria-label="Book a Discovery Sprint on Services page"
                 >
-                  Book Consultation
+                  Book a Discovery Sprint
                 </Link>
               </Button>
             </motion.div>
@@ -451,7 +456,7 @@ export default function ServicesPage() {
           >
             <h2 className="text-section-hero-gradient mb-6">Our Engagement Process</h2>
             <p className="text-xl text-white/85 max-w-2xl mx-auto">
-              A proven three-step approach to AI transformation
+              A proven three-step approach to product delivery
             </p>
           </motion.div>
 
@@ -470,10 +475,10 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h2 className="text-section-hero mb-6">
-              Ready to Start Your AI Journey?
+              Ready to Ship the Right Product?
             </h2>
             <p className="text-xl text-white/85 mb-8">
-              Let&apos;s discuss how our consulting services can help transform your organization.
+              Let&apos;s embed product leadership and give your team clarity, cadence, and confidence.
             </p>
             <Button 
               asChild
@@ -481,7 +486,7 @@ export default function ServicesPage() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link href="/contact">
-                Get Started Today
+                Book a Discovery Sprint
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

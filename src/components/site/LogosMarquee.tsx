@@ -15,30 +15,30 @@ import MetrixLogo from "@/images/METRIX.png";
 import OTLogo from "@/images/ot.svg";
 
 const logos = [
-  { src: AmazonLogo, alt: "Amazon Logo", name: "Amazon" },
-  { src: MicrosoftLogo, alt: "Microsoft Logo", name: "Microsoft" },
-  { src: PayPalLogo, alt: "PayPal Logo", name: "PayPal" },
-  { src: GartnerLogo, alt: "Gartner Logo", name: "Gartner" },
-  { src: EALogo, alt: "Electronic Arts Logo", name: "Electronic Arts" },
-  { src: FingerprintLogo, alt: "Fingercheck Logo", name: "Fingercheck" },
-  { src: MetrixLogo, alt: "METRIX Logo", name: "METRIX" },
-  { src: OTLogo, alt: "OT Logo", name: "OT" }
+  { src: AmazonLogo, alt: "Company logo: Amazon", name: "Amazon" },
+  { src: MicrosoftLogo, alt: "Company logo: Microsoft", name: "Microsoft" },
+  { src: PayPalLogo, alt: "Company logo: PayPal", name: "PayPal" },
+  { src: GartnerLogo, alt: "Company logo: Gartner", name: "Gartner" },
+  { src: EALogo, alt: "Company logo: Electronic Arts", name: "Electronic Arts" },
+  { src: FingerprintLogo, alt: "Company logo: Fingercheck", name: "Fingercheck" },
+  { src: MetrixLogo, alt: "Company logo: METRIX", name: "METRIX" },
+  { src: OTLogo, alt: "Company logo: OT", name: "OT" }
 ];
 
 export function LogosMarquee() {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section className="py-16 border-y border-white/10">
+    <section className="py-16 border-y border-white/10 mt-8">
       <div className="container">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center text-muted mb-12 font-medium"
+          className="text-center text-white/85 mb-8 font-medium text-lg"
         >
-          Trusted by leading organizations worldwide
+          Trusted by world-class companies and fast-growing startups
         </motion.p>
         
         <div 

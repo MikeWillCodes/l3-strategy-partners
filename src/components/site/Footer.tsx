@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 
 const footerLinks = {
   "Services": [
-    { name: "AI Strategy", href: "/services#ai-strategy" },
-    { name: "AI Readiness Score", href: "/services#ai-readiness" },
-    { name: "Digital Modernization", href: "/services#digital-modernization" },
-    { name: "Process Automation", href: "/services#process-automation" },
+    { name: "Discovery Sprint", href: "/services#discovery-sprint" },
+    { name: "The PM Pod", href: "/services#pm-pod" },
+    { name: "Delivery & Sprint Operations", href: "/services#delivery-operations" },
+    { name: "Product Analytics & Metrics", href: "/services#product-analytics" },
+    { name: "Go-to-Market Alignment", href: "/services#go-to-market" },
+    { name: "Scaling & Org Design", href: "/services#scaling-org-design" },
   ],
   "Company": [
     { name: "About Us", href: "/about" },
@@ -27,7 +29,7 @@ export function Footer() {
               L3
             </Link>
             <p className="text-muted mb-6 text-sm">
-              Unlock your path to scalable AI success with our expert strategy consulting.
+              Build the right product, faster.
             </p>
             <Button 
               asChild

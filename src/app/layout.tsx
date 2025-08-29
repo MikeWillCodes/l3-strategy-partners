@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "L3 Strategy Partners - Unlock Your Path to Scalable AI Success",
-  description: "Leading AI strategy consulting firm helping organizations develop scalable AI applications and data modernization solutions.",
-  keywords: ["AI strategy", "data modernization", "AI consulting", "machine learning", "artificial intelligence"],
+  title: "L3 Strategy Partners | PM-as-a-Service for Startups",
+  description: "L3 delivers PM-as-a-Service (PMaaS): Discovery, roadmap, and delivery run by experienced Principal, Senior, and Associate PMs. Validate faster, build smarter, and scale confidently.",
+  keywords: ["Product Management", "PMaaS", "Product Strategy", "Startup PM", "Product Roadmap", "Discovery Sprint"],
   authors: [{ name: "L3 Strategy Partners" }],
   creator: "L3 Strategy Partners",
   publisher: "L3 Strategy Partners",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "L3 Strategy Partners",
-    title: "L3 Strategy Partners - Unlock Your Path to Scalable AI Success",
-    description: "Leading AI strategy consulting firm helping organizations develop scalable AI applications and data modernization solutions.",
+    title: "L3 Strategy Partners | PM-as-a-Service for Startups",
+    description: "L3 delivers PM-as-a-Service (PMaaS): Discovery, roadmap, and delivery run by experienced Principal, Senior, and Associate PMs. Validate faster, build smarter, and scale confidently.",
     images: [
       {
         url: "/logo-1024.png",
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "L3 Strategy Partners - Unlock Your Path to Scalable AI Success",
-    description: "Leading AI strategy consulting firm helping organizations develop scalable AI applications and data modernization solutions.",
+    title: "L3 Strategy Partners | PM-as-a-Service for Startups",
+    description: "L3 delivers PM-as-a-Service (PMaaS): Discovery, roadmap, and delivery run by experienced Principal, Senior, and Associate PMs. Validate faster, build smarter, and scale confidently.",
     images: ["/logo-1024.png"],
   },
   manifest: "/site.webmanifest",

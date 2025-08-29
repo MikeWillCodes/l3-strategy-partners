@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Case Studies", href: "/case-studies" },
+  // { name: "Case Studies", href: "/case-studies" }, // Hidden - coming soon
   { name: "About", href: "/about" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -54,8 +54,8 @@ export function Navbar() {
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
-              <Link href="/contact" aria-label="Book a consultation with L3 Strategy Partners">
-                Book Consultation
+              <Link href="/contact" aria-label="Book a Discovery Sprint with L3 Strategy Partners">
+                Book a Discovery Sprint
               </Link>
             </Button>
           </div>
@@ -92,7 +92,7 @@ export function Navbar() {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                   >
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      Book Consultation
+                      Book a Discovery Sprint
                     </Link>
                   </Button>
                 </div>

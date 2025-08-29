@@ -9,55 +9,52 @@ const steps = [
   {
     id: "discovery",
     step: "01",
-    title: "Discovery & Assessment", 
-    subtitle: "Weeks 1–2",
+    title: "Discovery Sprint", 
+    subtitle: "Week 1–2",
     icon: Search,
-    description: "We start with a comprehensive assessment of your current AI readiness, data infrastructure, and business priorities to identify immediate opportunities.",
+    description: "Problem framing, success metrics, risks, 90-day plan",
     deliverables: [
-      "Stakeholder interviews and workshops",
-      "Technology and data audit",
-      "Risk and compliance assessment", 
-      "Quick wins identification",
-      "Baseline readiness scorecard"
+      "Problem framing",
+      "Success metrics",
+      "Risks",
+      "90-day plan"
     ],
-    kpis: "Current maturity score, # immediate opportunities identified",
+    kpis: "Decision confidence, time-to-plan",
     cta: "Begin Discovery",
     ctaLink: "/contact"
   },
   {
     id: "strategy",
     step: "02", 
-    title: "Strategy & Planning",
-    subtitle: "Weeks 3–6",
+    title: "Define & Roadmap",
+    subtitle: "Weeks 3–4",
     icon: Target,
-    description: "Build a comprehensive AI strategy with prioritized roadmap, governance frameworks, and detailed implementation plans for your first pilots.",
+    description: "User stories, PRDs, backlog, roadmap",
     deliverables: [
-      "12-month AI roadmap with priorities",
-      "Governance model and risk framework",
-      "Architecture patterns and platform choices",
-      "Detailed business cases for pilots",
-      "Change management plan"
+      "User stories",
+      "PRDs",
+      "Backlog",
+      "Roadmap"
     ],
-    kpis: "ROI projections, pilot selection criteria, governance adoption",
-    cta: "Plan My Strategy", 
+    kpis: "Backlog readiness %, roadmap confidence",
+    cta: "Plan My Roadmap", 
     ctaLink: "/contact"
   },
   {
     id: "implementation",
     step: "03",
-    title: "Implementation & Support",
-    subtitle: "Weeks 7+", 
+    title: "Execute & Learn",
+    subtitle: "Weeks 5+", 
     icon: Rocket,
-    description: "Execute your AI pilots with hands-on support, measure results, and scale successful use cases across your organization with ongoing guidance.",
+    description: "Sprints/releases, dashboards, experiments, retrospectives",
     deliverables: [
-      "2-3 AI pilots shipped to production",
-      "Performance monitoring and dashboards",
-      "Team training and enablement",
-      "Scaling playbooks and templates",
-      "Ongoing optimization support"
+      "Sprints/releases",
+      "Dashboards",
+      "Experiments",
+      "Retrospectives"
     ],
-    kpis: "Pilot success rate, time to production, user adoption, ROI achieved",
-    cta: "Launch My Pilot",
+    kpis: "On-time delivery %, activation rate, time-to-first-value",
+    cta: "Launch With L3",
     ctaLink: "/contact"
   }
 ];

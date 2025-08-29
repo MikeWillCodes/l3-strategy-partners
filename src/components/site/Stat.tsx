@@ -15,7 +15,7 @@ export function Stat({ value, label, delay = 0 }: StatProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
-      className="text-center"
+      className="text-center min-w-48"
     >
       <div className="text-display text-gradient mb-2 font-bold">
         {value}

@@ -18,42 +18,41 @@ import {
 
 const features = [
   {
-    icon: Brain,
-    title: "AI Strategy & Adoption",
-    description: "From pilot to scale with governance and change management."
-  },
-  {
-    icon: CheckCircle,
-    title: "AI Readiness Score",
-    description: "Fast assessment to identify gaps and quick wins."
-  },
-  {
     icon: Target,
-    title: "Digital Modernization Blueprint",
-    description: "Practical 90-day plan with priorities."
+    title: "Discovery Sprint",
+    description: "2-week engagement to validate the problem, define success metrics, and produce a 90-day plan."
   },
   {
     icon: Users,
-    title: "Customer Experience Optimization",
-    description: "AI-assisted service and personalization."
+    title: "The PM Pod",
+    description: "Your dedicated PM Pod team — led by a Principal PM with support from Senior and Associate PMs. Together, they design your roadmap, run sprints, and drive outcomes."
   },
   {
-    icon: Settings,
-    title: "Process Automation",
-    description: "Automations that save hours each week."
+    icon: CheckCircle,
+    title: "Delivery & Sprint Operations",
+    description: "Standups, backlog hygiene, acceptance criteria, and release notes that keep engineering unblocked."
+  },
+  {
+    icon: Brain,
+    title: "Product Analytics & Metrics",
+    description: "North Star Metric, KPIs (key performance indicators), tracking plans, and dashboards for clarity."
   },
   {
     icon: Zap,
-    title: "Tailored AI Solutions",
-    description: "Custom co-pilots and domain models."
+    title: "Go-to-Market Alignment",
+    description: "Positioning, pricing experiments, launch checklists, and cross-functional coordination for adoption."
+  },
+  {
+    icon: Settings,
+    title: "Scaling & Org Design",
+    description: "OKRs (Objectives and Key Results), process playbooks, and governance to scale product delivery."
   }
 ];
 
 const stats = [
-  { value: "2025", label: "Founded", delay: 0 },
-  { value: "10+", label: "Team Members", delay: 0.1 },
-  { value: "10+", label: "Projects Delivered", delay: 0.2 },
-  { value: "15+", label: "Years of Experience", delay: 0.3 }
+  { value: "10+", label: "FAANG PMs", delay: 0 },
+  { value: "100+", label: "Products shipped", delay: 0.1 },
+  { value: "20+", label: "Years of product leadership experience", delay: 0.2 }
 ];
 
 export default function Home() {
@@ -75,12 +74,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-section-hero mb-6">
-              L3 Delivers <span className="text-gradient">Comprehensive AI Solutions</span> for Your Organization
+            <h2 className="text-section-hero-gradient mb-6">
+              L3 Delivers <span className="text-gradient">Product Management-as-a-Service</span>
             </h2>
             <p className="text-xl text-white/85 max-w-3xl mx-auto">
-              From strategy to implementation, we provide end-to-end AI consulting services 
-              to help your organization harness the full potential of artificial intelligence.
+              From discovery to delivery, we embed experienced product leadership so your team ships the right thing on time.
             </p>
           </motion.div>
 
@@ -112,11 +110,11 @@ export default function Home() {
               Proven Track Record
             </h2>
             <p className="text-xl text-white/85 max-w-2xl mx-auto">
-              Our expertise speaks through measurable results and successful AI transformations.
+              Our product leadership is measured by shipped features and business impact.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-16 max-w-5xl mx-auto">
             {stats.map((stat) => (
               <Stat
                 key={stat.label}
@@ -133,10 +131,10 @@ export default function Home() {
       <section className="py-20 lg:py-32">
         <div className="container">
           <Testimonial
-            quote="L3 Strategy Partners transformed our AI capabilities from concept to production in record time. Their expertise in both technical implementation and strategic planning made all the difference."
+            quote="L3 gave us clarity and cadence. In two sprints, our PM Pod turned a vague backlog into a roadmap and helped us launch on schedule."
             author="Anonymous"
-            role="Chief Technology Officer"
-            company="Confidential Company"
+            role="CEO at Seed-stage SaaS Company"
+            company=""
           />
         </div>
       </section>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
+import { useEffect, useState } from "react";
 
 // Case study data structure for detail pages
 const caseStudyDetails = {
@@ -213,12 +214,27 @@ interface PageProps {
   }>;
 }
 
-export default async function CaseStudyDetailPage({ params }: PageProps) {
-  const { slug } = await params;
-  const caseStudy = caseStudyDetails[slug as keyof typeof caseStudyDetails];
+export default function CaseStudyDetailPage({ params }: PageProps) {
+  const [slug, setSlug] = useState<string>("");
+  const [caseStudy, setCaseStudy] = useState<typeof caseStudyDetails[keyof typeof caseStudyDetails] | null>(null);
+
+  useEffect(() => {
+    const getParams = async () => {
+      const { slug: resolvedSlug } = await params;
+      setSlug(resolvedSlug);
+      const study = caseStudyDetails[resolvedSlug as keyof typeof caseStudyDetails];
+      setCaseStudy(study);
+      
+      if (!study) {
+        notFound();
+      }
+    };
+    
+    getParams();
+  }, [params]);
 
   if (!caseStudy) {
-    notFound();
+    return null; // Loading state
   }
 
   return (
